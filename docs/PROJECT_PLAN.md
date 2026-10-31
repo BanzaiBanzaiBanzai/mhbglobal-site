@@ -64,3 +64,6 @@ Offline request: GitHub disconnected from Pages and verified. Permanent Pages pr
 
 ## Hosting offline confirmed, 2026-10-31
 User completed Cloudflare Pages deletion. Inventory verified project absent; mhbglobal.se and mhbglobal-site.pages.dev both return DNS ENOTFOUND. No website is served at either address in current verification. Earlier maintenance-live/pending-removal status is superseded. Restore settings and pending minimum legal/email work are recorded in docs/AGENDA.txt. Local-only hold remains in effect.
+
+## Business mailboxes configured, 2026-10-31
+Owner authorised execution after workflow explanation. Primary mailbox elin@mhbglobal.se; login unchanged hasnain@mhbglobalab.onmicrosoft.com. Created kontakt and support shared mailboxes, granted owner Full Access + Send As and verified owner UPN in both Send As lists. Support alias migrated, historical user-mailbox messages preserved. MX/SPF checked. No additional licences or test emails. Evidence work/business-mailboxes-created.png. Outlook propagation/end-to-end tests remain pending; website hold remains.

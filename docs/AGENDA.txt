@@ -54,3 +54,13 @@ Custom domain blocker resolved: mhbglobal.se removed from Pages custom domains, 
 
 OFFLINE VERIFIED — 31 October 2026
 User completed project deletion. Verified Cloudflare Workers & Pages inventory no longer contains mhbglobal-site. Both https://mhbglobal.se/ and https://mhbglobal-site.pages.dev/ fail DNS resolution (ENOTFOUND) in verification. This supersedes all earlier pending-deletion/maintenance-live notes. GitHub repository, local preview and private media remain preserved. Work stays on hold and local until owner authorises final deployment.
+
+EMAIL SETUP COMPLETED — 31 October 2026
+Owner authorised recommended mailbox structure. Exchange verified:
+- Sign-in/User ID unchanged: hasnain@mhbglobalab.onmicrosoft.com. Existing password/MFA unchanged.
+- Existing user mailbox primary SMTP now elin@mhbglobal.se; original onmicrosoft email retained. Display name remains Hasnain Haider Baig Mirza (not renamed to Elin).
+- kontakt@mhbglobal.se: shared mailbox, display MHB Global — Enquiries.
+- support@mhbglobal.se: moved from user-mailbox alias to new shared mailbox, display MHB Global — Support. Historical messages remain in original mailbox.
+- Hasnain granted Read and manage (Full Access) and Send As on both; exact original UPN verified in both Send As lists. Microsoft warns up to 60 minutes for Outlook propagation.
+- No additional licences purchased. MX points to Microsoft and SPF includes spf.protection.outlook.com, verified DNS.
+Remaining verification: Outlook shared-mailbox visibility, From behaviour, end-to-end external send/receive tests, shared Sent Items copies and sign-in-block state, DKIM/DMARC. No test messages sent this turn. Website/Formspree recipient not changed; website stays offline. Earlier 72-hour email-provisioning wait is superseded by successful creation, but delivery tests still pending.
