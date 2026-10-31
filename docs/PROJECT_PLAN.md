@@ -39,3 +39,19 @@ After launch, owner requested full website previews and matching mobile app layo
 
 ## Approved artwork with local interactions, 2026-10-31
 Owner approved three static website/phone compositions and requested light interaction without navigation. Replaced generated HTML compositions with exact approved images (lossless WebP, decoded pixels verified against PNGs), CSS hotspot buttons and accessible optional Swedish controls. Cafe selections, appointment selection, quote draft/summary, reopening without duplicate handlers and unchanged URL verified in internal browser. Mobile 390px: no modal overflow, alternate controls at least 44px high; no console errors. New media 012–014 saved privately with hashes and original files. Local only; production remains 74f164b.
+
+## Maintenance and privacy review, 2026-10-31
+Current public state supersedes the earlier launch notes: maintenance release a9515f3 is deployed on production main. /, /en/ and /privacy return HTTP 503 with Retry-After 3600 and no enquiry form. Full-site republishing is on hold. Local preview remains available.
+
+| ID | Priority/status | Task / owner | Depends on | Acceptance evidence |
+|---|---|---|---|---|
+| DEMO-01 | P1 DONE | Limit mockups to visual click feedback / Team Lead IT | REVIEW-02 | Approved images unchanged; removed panels, messages and demo flows; cafe click verified with zero extra panels and unchanged URL; 7 tests pass |
+| MAINT-01 | P1 DONE | Temporarily replace public site / Team Lead IT | User instruction | a9515f3; Swedish/English maintenance page verified in internal browser and HTTP 503 on three routes |
+| PRIV-01 | P1 DONE | External GPT-6 Pro gap review / External curator | None | Review completed in external ChatGPT; private copy saved outside public repository; four material areas identified |
+| PRIV-02 | P1 DONE | Disable optional client analytics / Team Lead IT | PRIV-01 | Cloudflare RUM Disable remained selected after reload; previous setting excluded EU visitors |
+| PRIV-03 | P1 BLOCKED | Complete company disclosure and privacy notice / Team Lead IT + Hasnain | PRIV-01 | Await current address/public email confirmation, retention decision and verified enquiry-provider terms; existing notice is not final |
+| PRIV-04 | P1 PLANNED | Verify collection contracts and mailbox / Team Lead IT + Hasnain | PRIV-01 | Establish Formspree Article 28 coverage, transfer/deletion terms and managed business mailbox coverage before restoring enquiries |
+
+External review: https://chatgpt.com/c/6ae62644-3760-8332-863f-e29c8f279393 . Findings are a gap review, not certification. Company registration number and seat verified; full private company documents are not in this repository. Consumer Hotmail was used for the working delivery test; business mailbox is recommended for the continuing enquiry store. Thirty-day Formspree dashboard access is not evidence of deletion. No cookie banner added merely for the contact form. Initial analytics recommendation: existing server statistics plus Search Console/Bing Webmaster Tools with DNS/static verification; no new trackers or advertising. Search tools have not been configured.
+
+Evidence outside public repository: work/maintenance-live.png, work/analytics-disabled.png, work/privacy-review-2026-10-31.txt. Preview changes checkpointed locally after this entry. Production maintenance was built from a separate worktree; future restoration must integrate main history rather than force-push.
