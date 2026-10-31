@@ -1,0 +1,47 @@
+MHB GLOBAL SWEDEN — RESUME AGENDA
+Updated 31 October 2026, Europe/Stockholm
+STATUS: ON HOLD at Hasnain's request. Do not relaunch or enable deletion jobs.
+
+WHEN ASKED "WHAT IS ON THE AGENDA?"
+Start here. Task evidence and Git history are in PROJECT_PLAN.md in this folder.
+The live domain stays on maintenance. The complete website remains a local preview.
+
+NEXT, WHEN HASNAIN RESUMES
+1. Confirm the final company/business address. Address may change soon; do not publish the old address as final.
+2. Recheck Microsoft domain/email setup no earlier than 3 November 2026, 18:48 Stockholm time (72 hours after this hold decision). Microsoft reportedly advised waiting 24 hours; owner chose 72. This is an agenda date, not an automatic job.
+3. Set up/verify elin@mhbglobal.se and support@mhbglobal.se using the intended one-user arrangement. Verify sending, receiving, aliases/shared mailbox choice, public contact address and sign-in workflow. Do not buy extra licences automatically.
+4. Collect the source-package review from the existing external ChatGPT Pro chat, then resolve only material applicable findings. Do not assume all checks passed. As of hold: reviewer reports build and seven tests pass; flags no-JavaScript direct submission bypassing the review step, plus Linux preview-server portability. Final report pending.
+
+MINIMUM BEFORE REOPENING ENQUIRIES
+- Publish verified legal company name, organisation number, registered seat, business address, monitored email and VAT number where applicable. Identity already checked: MHB Global AB, 559538-7282, Stockholm. Address/email are pending.
+- Minimise fields: consider required email/message, optional name/company. GDPR still applies to identifiable email, messages and technical logs even without a database owned by us.
+- Finish matching Swedish/English privacy information: controller/contact, data/purpose, appropriate lawful bases (individual precontract steps vs B2B representative legitimate interests), recipients, retention, actual transfers/safeguards, rights and IMY complaint route. Explain delivery/security technical data separately.
+- Verify actual Formspree free-account data-processing agreement/roles, transfer safeguards, deletion/backups and security. Public claims alone are not account-contract evidence. Verify Cloudflare and Microsoft arrangements too.
+- Prefer the existing Microsoft business mailbox for enquiries. Consumer Hotmail is the current tested recipient, not yet approved as the continuing business store or public contact address.
+- Retention agreed in principle: separate website-enquiry email folder; delete closed unsuccessful enquiries six months after last contact. Customer/accounting records handled separately. Confirm implementation can use last-contact timing rather than indiscriminately deleting active leads. Apply to Formspree copies and relevant trash/backups too. No deletion rule enabled yet.
+- Keep a short processing/legitimate-interest record and rights/deletion/incident procedure. Confirm who has access, MFA, and the responsible person. No complex compliance system.
+- Fix verified material code/notice mismatches, test normal/failure/no-JavaScript submission paths without sending real customer data, check mobile/keyboard basics and SV/EN consistency.
+- Determine applicability of accessibility/AI transparency rules from actual business/site facts; do not assume every optional improvement is a legal launch requirement.
+
+CURRENT PUBLIC PROTECTION
+- Maintenance response: HTTP 503 + Retry-After, no public enquiry form, noindex/nofollow headers and HTML.
+- robots.txt: User-agent: * / Disallow: / requested for all compliant search and AI crawlers. It is not access control and cannot guarantee removal of previously indexed URLs or stop bots that ignore it.
+- Cloudflare optional client RUM disabled and verified. Do not add optional trackers or a cookie banner merely because a contact form exists.
+
+CONTROLLED RELAUNCH, ONLY WHEN AUTHORISED
+- Final local review, verified disclosures/provider arrangements and enquiry test.
+- Restore full site from local branch while preserving production maintenance history; no force-push.
+- Remove maintenance robots disallow and noindex from production; restore normal sitemap/robots and 200 responses. Check deployed output and provider-injected scripts.
+- Recheck crawlability and ask search engines to index only after full site is ready.
+
+LATER, OPTIONAL
+- Free Google Search Console and Bing Webmaster Tools using DNS/static verification.
+- Existing Cloudflare server statistics, interpreted cautiously (requests/bots are not customers).
+- Review genuinely needed analytics later. Ads, pixels, paid tools, outreach campaigns, new functionality and automated deletion jobs are outside this hold.
+- Reassess privacy/legal impact when adding forms, accounts, payments, analytics or advertising. Keep scope proportionate.
+
+RECORDS
+External review chat: https://chatgpt.com/c/6ae62644-3760-8332-863f-e29c8f279393
+Public-source review package and private reviewer copies are in the parent workspace work folder, outside the public website repository.
+Media originals, credit/provenance records and archives stay in the private Google Drive Media Library. Do not publish those records.
+No legal clearance or guarantee against complaints has been issued. Track concrete completed checks and unresolved facts.
