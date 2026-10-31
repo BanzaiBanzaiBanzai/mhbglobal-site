@@ -70,3 +70,6 @@ Owner authorised execution after workflow explanation. Primary mailbox elin@mhbg
 
 ## Two-way email tests completed, 2026-10-31
 Owner authorised testing with private Hotmail UK. Connector sent three diagnostic messages; Outlook web confirmed receipt in Elin, Kontakt and Support inboxes. Replies automatically used the matching From address. Connector query scoped to the Hotmail Inbox confirmed all three replies received (19:37:50, 19:38:48, 19:39:38 UTC), with correct sender addresses/display names. Full Access and Send As verified in practice. Evidence: work/support-two-way-test.png outside public repository; test messages retained in mailboxes. No credentials changed, no account sign-out, no extra licences, no website publication. DKIM/DMARC audit and wider-provider deliverability remain outside these tests. Existing local checkpoint before tests: d9980a8.
+
+## Same-tab mailbox access, 2026-10-31
+Added Support and Kontakt to owner Outlook sidebar through current Chrome session; both additions confirmed. Switched to Support Inbox and verified test message in same tab. Three roots visible; no new access permissions, accounts or messages. Evidence work/chrome-shared-mailboxes.jpg.
