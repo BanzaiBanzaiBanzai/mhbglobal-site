@@ -73,3 +73,6 @@ Owner authorised testing with private Hotmail UK. Connector sent three diagnosti
 
 ## Same-tab mailbox access, 2026-10-31
 Added Support and Kontakt to owner Outlook sidebar through current Chrome session; both additions confirmed. Switched to Support Inbox and verified test message in same tab. Three roots visible; no new access permissions, accounts or messages. Evidence work/chrome-shared-mailboxes.jpg.
+
+## Microsoft outbound restriction escalation, 2026-10-31
+Verified both shared-mailbox Gmail NDRs: 550 5.7.708 AS(7910), originating 20:06:10/20:06:15 UTC. Submitted email support case 2610311420000346 with extracted report attachment; Open, Sev C, agent assignment pending. Requested trial IP exception if applicable and investigation/removal of restriction. Owner Hotmail UK is contact. Private diagnostics and screenshot in work/outbound-failure-reports.txt and work/microsoft-outbound-ticket.png. No resolution claimed; no new test sends or domain changes. Next Microsoft response, retest and authentication review. Prior Hotmail success does not establish Gmail delivery.
