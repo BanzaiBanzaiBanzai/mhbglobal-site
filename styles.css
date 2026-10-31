@@ -19,3 +19,7 @@
 #sample-content[data-example=cafe]{--ink:#28513d;--muted:#59645a;--paper:#faf8f1;background:var(--paper);color:var(--ink)}
 #sample-content[data-example=salon]{--ink:#884633;--muted:#6b6460;--paper:#fff;background:var(--paper);color:var(--ink)}
 #sample-content[data-example=house]{--ink:#454b43;--muted:#636a61;--paper:#f5f4ee;background:var(--paper);color:var(--ink)}
+/* Swedish gold accents for primary company actions; sample brands remain independent. */
+:root{--gold:#e4b642;--gold-hover:#d8a72c}
+.header-quote,.hero-actions>.button,.form-submit,#send-request{background:var(--gold);border-color:var(--gold);color:#183b63;font-weight:600}
+.header-quote:hover,.hero-actions>.button:hover,.form-submit:hover,#send-request:hover{background:var(--gold-hover);border-color:var(--gold-hover)}

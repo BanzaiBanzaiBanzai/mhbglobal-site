@@ -24,3 +24,6 @@ Enquiry test sent 2026-10-31, visible in Formspree and owner-confirmed in inbox.
 
 ## Colour revision, 2026-10-31
 User retained the layout and requested a blue company palette, more natural colourful cafe and brighter salon. Updated both responsive exports and all hero/card/dialog consumers. Cafe retains green example branding; salon has independent white/terracotta styling. English card top and image-to-caption gaps measured as zero at 1100px (floating-point tolerance). Seven automated checks passed. External curator identified no concrete high-risk issue in either replacement. Records stay private. No publication.
+
+## Gold accent trial, 2026-10-31
+Muted Swedish gold added only to primary company actions (header/hero quote, form review, final send), with navy text. Layout, photos and independent sample-brand buttons unchanged. Local review only.
