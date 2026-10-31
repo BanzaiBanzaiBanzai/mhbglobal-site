@@ -4,13 +4,13 @@ Updated: 2026-10-31. Goal: bilingual mobile-first website with working enquiries
 
 | Milestone | Status | Trigger | Exit gate |
 |---|---|---|---|
-| M0 Design | DONE | User selected cream/teal direction | Approved direction and replacement media screened |
+| M0 Design | DONE | User approved layout; requested navy-blue palette | Approved direction and replacement media screened |
 | M1 Working preview | IN PROGRESS | Implementation and feedback | User visual approval of revised preview |
 | M2 Launch | READY | User approves revised preview | Release build, deployment and live verification |
 
 | ID | Priority/status | Task / owner | Depends on | Acceptance evidence |
 |---|---|---|---|---|
-| BUILD-01 | P1 DONE | Revise mobile design and service copy / Team Lead IT | None | Digital presence headline, apps, upgrades; visual shown before actions on mobile; natural house/salon images |
+| BUILD-01 | P1 DONE | Revise mobile design and service copy / Team Lead IT | None | Navy-blue company palette; retained layout; cafe with yellow chairs and kids corner in hero/cards; bright white salon with terracotta chairs; card images flush-aligned |
 | QA-01 | P1 DONE | Verify revised site / Team Lead IT | BUILD-01 | 7 node tests; actual SV/EN selection replacement and preservation, mobile menu, privacy navigation, successful submission and inbox confirmation; no horizontal overflow at 320px |
 | REVIEW-01 | P1 READY | Review revised design / Hasnain | BUILD-01 | http://127.0.0.1:5194; not published |
 | FORM-01 | P1 DONE | Connect enquiry delivery / Team Lead IT | None | Formspree myeenkwa; storage and Formshield enabled; test in dashboard; owner confirmed inbox receipt |
@@ -19,5 +19,8 @@ Updated: 2026-10-31. Goal: bilingual mobile-first website with working enquiries
 
 ## Evidence and checkpoint
 Baseline checkpoint: 85b29ef. Updated local Git checkpoint follows this revision. No remote push or deployment.
-Seven automated tests pass. Public image payload: 426,180 bytes for three 1200px files; 155,850 bytes for three 640px files. Source image archive verified: 9 assets, 27 files on 2026-10-31. External ChatGPT visual screening found no concrete high-risk issue in the replacement images; no reverse-image search performed.
+Seven automated tests pass. Public image payload: 513,070 bytes for three 1200px files; 185,922 bytes for three 640px files. Source image archive verified: 9 assets, 27 files on 2026-10-31. External ChatGPT visual screening found no concrete high-risk issue in the replacement images; no reverse-image search performed.
 Enquiry test sent 2026-10-31, visible in Formspree and owner-confirmed in inbox. Current free plan: 50/month and 30-day dashboard archive.
+
+## Colour revision, 2026-10-31
+User retained the layout and requested a blue company palette, more natural colourful cafe and brighter salon. Updated both responsive exports and all hero/card/dialog consumers. Cafe retains green example branding; salon has independent white/terracotta styling. English card top and image-to-caption gaps measured as zero at 1100px (floating-point tolerance). Seven automated checks passed. External curator identified no concrete high-risk issue in either replacement. Records stay private. No publication.

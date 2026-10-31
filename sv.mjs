@@ -1,5 +1,5 @@
 export default {
-  "cafeAlt": "Ljust café med gröna stolar, träbord och växter",
+  "cafeAlt": "Ljust café med gula stolar, träbord och en färgglad barnhörna",
   "skip": "Hoppa till innehåll",
   "services": "Tjänster",
   "examples": "Designexempel",

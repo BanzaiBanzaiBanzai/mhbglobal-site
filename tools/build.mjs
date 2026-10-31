@@ -5,7 +5,7 @@ const root=resolve(import.meta.dirname,'..');
 const read=name=>readFile(resolve(root,name),'utf8');
 const write=(name,text)=>writeFile(resolve(root,name),text);
 const pages=['index.html','privacy.html'];
-const sv={cafeAlt:'Ljust café med gröna stolar, träbord och växter'};
+const sv={cafeAlt:'Ljust café med gula stolar, träbord och en färgglad barnhörna'};
 const element=/<([a-z0-9]+)([^>]*data-t="([^"]+)"[^>]*)>([\s\S]*?)<\/\1>/g;
 for(const name of pages){for(const match of (await read(name)).matchAll(element)){sv[match[3]]=match[4].replaceAll('&amp;','&')}}
 await write('sv.mjs','export default '+JSON.stringify(sv,null,2)+';\n');
