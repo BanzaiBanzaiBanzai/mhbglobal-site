@@ -45,3 +45,4 @@ External review chat: https://chatgpt.com/c/6ae62644-3760-8332-863f-e29c8f279393
 Public-source review package and private reviewer copies are in the parent workspace work folder, outside the public website repository.
 Media originals, credit/provenance records and archives stay in the private Google Drive Media Library. Do not publish those records.
 No legal clearance or guarantee against complaints has been issued. Track concrete completed checks and unresolved facts.
+Crawler block verified live: robots.txt returns HTTP 200 with only User-agent: * and Disallow: /. Cloudflare Bot Preference Sync disabled because its injected Allow: / conflicted with the maintenance block. Main page remains 503 and X-Robots-Tag noindex,nofollow. Reassess Bot Preference Sync at relaunch; do not blindly restore its prior AI-training restrictions if owner wants AI crawling then.
