@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {replaceDesignLine} from '../selection.mjs';
+import {submitEnquiry} from '../submission.mjs';
+import {readFile,readdir} from 'node:fs/promises';
+const sv='Jag är intresserad av designexemplet: Salong.';
+const en='I am interested in the design example: Salon.';
+test('language switches replace the managed sentence and preserve customer copy',()=>{assert.equal(replaceDesignLine(sv+'\nMy café opens in May.',sv,en),en+'\nMy café opens in May.')});
+test('changing design replaces prior choice rather than accumulating it',()=>{assert.equal(replaceDesignLine(en+'\nPersonal notes.',en,'New house choice.'),'New house choice.\nPersonal notes.')});
+test('manual edits are never erased',()=>{assert.equal(replaceDesignLine('I edited the request myself.',sv,en),'I edited the request myself.\n'+en)});
+test('blank form selection has no stray line breaks',()=>assert.equal(replaceDesignLine('','',sv),sv));
+test('submission succeeds only after provider confirms acceptance',async()=>{const payload=new FormData();payload.set('name','Test');let options;await submitEnquiry('https://formspree.io/f/test',payload,async(_,o)=>{options=o;return {ok:true,json:async()=>({ok:true})}});assert.equal(options.method,'POST');assert.equal(options.body,payload);assert.equal(options.headers.Accept,'application/json');});
+test('network failures, rejection and malformed acceptance remain failures',async()=>{for(const fake of [async()=>{throw Error('offline')},async()=>({ok:false}),async()=>({ok:true,json:async()=>({})}),async()=>({ok:true,json:async()=>{throw Error('invalid json')}})]){await assert.rejects(submitEnquiry('endpoint',new FormData(),fake))}});
+test('crawlable locale pages include matching metadata and no private records',async()=>{for(const locale of ['','en/']){const html=await readFile(new URL('../dist/'+locale+'index.html',import.meta.url),'utf8');assert.match(html,new RegExp('<html lang="'+(locale?'en':'sv')+'">'));assert.ok(html.includes('href="https://mhbglobal.se/'+locale+'"'));assert.match(html,/hreflang="sv"/);assert.match(html,/hreflang="en"/);assert.ok(html.includes(locale?'A stronger digital presence.':'En starkare digital närvaro.'));assert.equal((html.match(/<h1>/g)||[]).length,1)}const names=await readdir(new URL('../dist/',import.meta.url),{recursive:true});assert.ok(!names.some(n=>/records|archives|PROJECT_PLAN|\.png$/.test(n)));});
