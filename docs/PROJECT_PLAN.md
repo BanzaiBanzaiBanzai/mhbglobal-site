@@ -61,3 +61,6 @@ Owner paused launch pending address change and Microsoft email provisioning. Res
 Verification: live robots.txt is exactly User-agent: * / Disallow: /, HTTP 200. Cloudflare Bot Preference Sync disabled to remove injected conflicting Allow: /. Homepage remains 503/noindex. Evidence work/crawler-block-live.png. Source audit progress saved privately; final result to collect on resume. Spreadsheet deferred in favour of the requested simple text agenda during hold.
 
 Offline request: GitHub disconnected from Pages and verified. Permanent Pages project deletion is at the final confirmation dialog; not executed. Source/checkpoints and restoration settings saved in docs/AGENDA.txt. Public maintenance still present until removal is confirmed.
+
+## Hosting offline confirmed, 2026-10-31
+User completed Cloudflare Pages deletion. Inventory verified project absent; mhbglobal.se and mhbglobal-site.pages.dev both return DNS ENOTFOUND. No website is served at either address in current verification. Earlier maintenance-live/pending-removal status is superseded. Restore settings and pending minimum legal/email work are recorded in docs/AGENDA.txt. Local-only hold remains in effect.
