@@ -17,6 +17,9 @@ Updated: 2026-10-31. Goal: bilingual mobile-first website with working enquiries
 | SEO-01 | P1 DONE | SEO and delivery foundations / Team Lead IT | BUILD-01 | Static SV/EN HTML, canonical/hreflang, sitemap, metadata, responsive WebP, public-only dist and security headers |
 | RELEASE-01 | P1 DONE | Publish approved version / Team Lead IT | REVIEW-01 | Live at https://mhbglobal.se; release dist deployed; bilingual routes, images and live enquiry verified |
 
+| CONCEPT-01 | P1 DONE | Local website and app concepts / Team Lead IT | None | Three distinct scrolling website compositions, Swedish app interfaces; menu, appointment and quote interactions checked; 320/390px overflow checks passed |
+| REVIEW-02 | P1 READY | Review local concepts and supply salon reference / Hasnain | CONCEPT-01 | http://127.0.0.1:5194/#examples; current salon photo remains placeholder; no publication |
+
 ## Evidence and checkpoint
 Baseline checkpoint: 85b29ef. Updated local Git checkpoint follows this revision. No remote push or deployment.
 Seven automated tests pass. Public image payload: 513,070 bytes for three 1200px files; 185,922 bytes for three 640px files. Source image archive verified: 9 assets, 27 files on 2026-10-31. External ChatGPT visual screening found no concrete high-risk issue in the replacement images; no reverse-image search performed.
@@ -30,3 +33,6 @@ Muted Swedish gold added only to primary company actions (header/hero quote, for
 
 ## Production launch, 2026-10-31
 User approved publication. Release 74f164b deployed through Cloudflare Pages production main; deployment 56a84780-f8e1-4528-a64c-01bfb2391567. Build command: node tools/build.mjs --release; output: dist. Swedish/English home and privacy routes return 200, indexing enabled, security headers present, all six live image hashes match saved exports. Live form test accepted; browser reported no console errors. Seven automated tests passed. Media originals, derivatives, screening reports and publication hashes retained privately in the Google Drive media library; archive verified.
+
+## Local concept revision, 2026-10-31
+After launch, owner requested full website previews and matching mobile app layouts. Added editorial cafe, construction portfolio and salon booking compositions with generic industry names and minimal Swedish app labels. Gallery cards preview website + phone; expanded views have navigation and interactive app states. Seven automated checks pass, menu filtering/addition, quote selection, appointment day/time, design selection to enquiry and 320/390px overflow checks verified in internal browser; no console errors. Owner rejected generated salon directions and will supply a reference; paused photo work, retained existing photo only as a placeholder. This revision is local only; live release remains 74f164b.
