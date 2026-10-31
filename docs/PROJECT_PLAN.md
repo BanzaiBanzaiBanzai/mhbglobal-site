@@ -18,7 +18,7 @@ Updated: 2026-10-31. Goal: bilingual mobile-first website with working enquiries
 | RELEASE-01 | P1 DONE | Publish approved version / Team Lead IT | REVIEW-01 | Live at https://mhbglobal.se; release dist deployed; bilingual routes, images and live enquiry verified |
 
 | CONCEPT-01 | P1 DONE | Local website and app concepts / Team Lead IT | None | Three distinct scrolling website compositions, Swedish app interfaces; menu, appointment and quote interactions checked; 320/390px overflow checks passed |
-| REVIEW-02 | P1 READY | Review local concepts and supply salon reference / Hasnain | CONCEPT-01 | http://127.0.0.1:5194/#examples; current salon photo remains placeholder; no publication |
+| REVIEW-02 | P1 READY | Review approved-image click-through previews / Hasnain | CONCEPT-01 | http://127.0.0.1:5194/#examples; approved static mockups with local hotspots; no publication |
 
 ## Evidence and checkpoint
 Baseline checkpoint: 85b29ef. Updated local Git checkpoint follows this revision. No remote push or deployment.
@@ -36,3 +36,6 @@ User approved publication. Release 74f164b deployed through Cloudflare Pages pro
 
 ## Local concept revision, 2026-10-31
 After launch, owner requested full website previews and matching mobile app layouts. Added editorial cafe, construction portfolio and salon booking compositions with generic industry names and minimal Swedish app labels. Gallery cards preview website + phone; expanded views have navigation and interactive app states. Seven automated checks pass, menu filtering/addition, quote selection, appointment day/time, design selection to enquiry and 320/390px overflow checks verified in internal browser; no console errors. Owner rejected generated salon directions and will supply a reference; paused photo work, retained existing photo only as a placeholder. This revision is local only; live release remains 74f164b.
+
+## Approved artwork with local interactions, 2026-10-31
+Owner approved three static website/phone compositions and requested light interaction without navigation. Replaced generated HTML compositions with exact approved images (lossless WebP, decoded pixels verified against PNGs), CSS hotspot buttons and accessible optional Swedish controls. Cafe selections, appointment selection, quote draft/summary, reopening without duplicate handlers and unchanged URL verified in internal browser. Mobile 390px: no modal overflow, alternate controls at least 44px high; no console errors. New media 012–014 saved privately with hashes and original files. Local only; production remains 74f164b.

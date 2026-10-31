@@ -20,8 +20,7 @@ document.querySelectorAll('.example-card[data-example]').forEach(button=>{
  const key=button.dataset.example;
  const image=button.querySelector('.example-image');
  image.innerHTML=conceptMarkup(key,{mini:true});
- const scalePreview=()=>{const stage=image.firstElementChild;const scale=image.clientWidth/stage.offsetWidth;stage.style.transform='scale('+scale+')';image.style.height=(780*scale)+'px'};
- new ResizeObserver(scalePreview).observe(image);scalePreview();
+
  button.addEventListener('click',()=>{
   mountConcept(document.querySelector('#sample-content'),key,()=>{
    document.querySelector('#sample-dialog').close();
