@@ -13,7 +13,7 @@ Updated: 2026-11-02. Goal: bilingual mobile-first website with working enquiries
 | ID | Priority/status | Task / owner | Depends on | Acceptance evidence |
 |---|---|---|---|---|
 | BUILD-01 | P1 DONE | Revise mobile design and service copy / Team Lead IT | None | Navy-blue company palette; retained layout; cafe with yellow chairs and kids corner in hero/cards; bright white salon with terracotta chairs; card images flush-aligned |
-| QA-01 | P1 IN PROGRESS | Verify current relaunch / Web Developer | BUILD-01 | Nine automated checks pass; prior 31 October browser checks retained below; current rendered/mobile QA pending |
+| QA-01 | P1 IN PROGRESS | Verify current relaunch / Web Developer | BUILD-01 | Nine automated checks pass; prior 31 October browser checks retained below; 390px core browser QA passed; final QA remains |
 | REVIEW-01 | P1 DONE | Review revised design / Hasnain | BUILD-01 | User approved navy/gold preview on 2026-10-31 |
 | FORM-01 | P1 BLOCKED | Finalise business enquiry delivery / Web Developer | Provider/account access | Historical Hotmail test passed; Kontakt routing, processor/transfer terms and retention implementation remain open |
 | SEO-01 | P1 DONE | SEO and delivery foundations / Team Lead IT | BUILD-01 | Static SV/EN HTML, canonical/hreflang, sitemap, metadata, responsive WebP, public-only dist and security headers |
@@ -91,9 +91,9 @@ Owner confirms existing Vällingby address, reports Microsoft restriction fixed,
 |---|---|---|---|---|
 | RELAUNCH-01 | P1 DONE | Collect final external source audit / Team Lead IT | None | Read completed Privacy Gap Review; material source fixes implemented locally; nine automated checks pass |
 | RELAUNCH-02 | P1 DONE | Prepare verified disclosures and minimal form / Team Lead IT | Owner address confirmation | SV/EN address, org/VAT, direct contact, basis/rights/retention text; optional name/service; no-JS submission disabled with email fallback |
-| RELAUNCH-03 | P1 BLOCKED | Finalise enquiry providers and retention / Team Lead IT + Hasnain | Browser access/account terms | Private monthly manual workflow drafted; Formspree recipient, processor terms, storage and mailbox folders not applied |
+| RELAUNCH-03 | P1 BLOCKED | Finalise enquiry providers and retention / Web Developer + Hasnain | Formspree sign-in/account terms | Browser restored; Formspree signed out. Business recipient, Article 28/transfer evidence, storage/deletion settings and retention implementation remain open |
 | RELAUNCH-04 | P1 BLOCKED | Verify mail authentication and delivery / Team Lead IT | Browser access | Owner says restriction fixed; SPF present, public DMARC/standard DKIM records absent; obtain exact tenant values and retest |
-| RELAUNCH-05 | P1 IN PROGRESS | Final local QA and owner look / Team Lead IT + Hasnain | RELAUNCH-03 | Nine tests pass; rendered/mobile QA pending; design/assets unchanged |
+| RELAUNCH-05 | P1 IN PROGRESS | Final local QA and owner look / Web Developer + Hasnain | RELAUNCH-03 | Nine tests pass; 390px core rendered/mobile checks pass; wider/narrower final QA and routed delivery remain; design/assets unchanged |
 | RELAUNCH-06 | P1 PLANNED | Restore hosting and search discovery / Team Lead IT | Final approval and blockers cleared | No deployment; preserve indexing metadata/sitemap; verify bot access, security headers and absent optional beacon after launch |
 
 Analytics choice: start with existing aggregate server reports and Search Console/Bing verification, no client tracker. Detailed click tracking deferred. SEO foundations retained and company structured data enriched; indexing/recommendation not guaranteed. Public privacy wording remains a launch draft until actual provider arrangements are verified. Private workflow/source links: work/enquiry-operations.txt outside repository. This entry supersedes earlier completed-release/hold and pending-address statuses.
@@ -120,3 +120,7 @@ SV/EN notice and private cleanup procedure agree: six-month threshold after last
 
 ## Internal browser QA resumed, 2 November 2026
 Restored a single LAN preview listener at 192.168.1.30:5194 after no listener was found. No firewall changes. Internal browser 390x844 rendered hero inspection passed; zero broken images or horizontal overflow. Cafe selection, English translation, replacement by construction selection, optional-field review, Escape dialog/menu focus and keyboard privacy navigation passed. No console errors/warnings. No submission sent. Private evidence: work/browser-qa-2026-11-02.txt. Formspree is signed out; owner sign-in requested before provider settings/routing inspection. Design unchanged; publication hold remains.
+
+## Current external-review and account gates, 2 November 2026
+The completed Privacy Gap Review (chat 6ae62644-3760-8332-863f-e29c8f279393) has been collected; RELAUNCH-01 is complete. Its material source findings were addressed at checkpoint 9398e98 and subsequent QA is recorded above. No duplicate external audit started. This source review does not close provider/account gates: Formspree business routing, applicable processing/transfer terms, storage/log/backup retention, mailbox retention setup, actual hosting analytics coverage and final deployment checks remain open. Formspree sign-in handoff is retained without login polling. Team Lead IT owns Microsoft authentication separately and reports tenant status NoDKIMKeys for mhbglobal.se; worker will not make simultaneous mailbox/DNS changes. Public hosting remains offline and final owner approval is required.
+
