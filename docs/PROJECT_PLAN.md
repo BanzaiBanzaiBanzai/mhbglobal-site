@@ -98,3 +98,13 @@ Analytics choice: start with existing aggregate server reports and Search Consol
 
 ## Website ownership handover, 2026-11-02
 Owner requested a dedicated Web Developer worker (GPT-6 Astra, medium reasoning) responsible for website development, SEO/AI discovery, analytics/reporting, cookie/privacy arrangements, enquiry flow, QA and deployment preparation. Team Lead IT coordinates wider company IT and receives reports. Worker thread: 01a19d3d-4b4a-7f02-a0d3-b5021ca76e8b, same workspace, MHB Global IT sidebar. Existing AGENDA.txt and this plan remain authoritative; no duplicate task tracker. Preserve approved design; public deployment still waits for readiness and owner's final look. Worker owns subsequent website edits to avoid concurrent changes. Analytics reporting should support date-range traffic, countries, available page/referrer trends, search visibility and enquiries, separating bots/sampling/unknowns; select manageable existing/free tools from current primary documentation. No automatic recurring job or paid service authorised.
+
+## Web Developer initial assessment, 2026-11-02
+Web Developer accepted website ownership and reviewed agenda, implementation checkpoint and private operations notes. LAN preview still returns200. Current official Cloudflare documentation supports using existing free server reports for basic traffic/country reporting; detailed page/referrer data is plan-dependent and must be verified in this account. On-demand report procedure documented privately in work/enquiry-operations.txt, with period comparison, source/metric definitions, bot limitations and separate search/enquiry figures. No trackers, paid plans, credentials, scheduled jobs or account settings changed. Internal browser unavailable; Formspree/tenant/hosting account verification and rendered QA remain blocked.
+
+| ID | Priority/status | Task / owner | Depends on | Acceptance evidence |
+|---|---|---|---|---|
+| ANALYTICS-01 | P1 DONE | Select initial analytics/report workflow / Web Developer | Owner delegation | Current official Cloudflare docs reviewed; free aggregate server reports plus search tools; private reporting procedure saved |
+| ANALYTICS-02 | P1 BLOCKED | Verify account reporting and search ownership / Web Developer | Internal browser and hosting restoration | No account access/configuration claimed; confirm actual metrics and DNS/static ownership verification |
+
+Open launch gates unchanged: Formspree business routing/processor and retention evidence; mailbox retention implementation; exact tenant DKIM/DMARC and delivery verification; rendered/mobile QA; final owner look and approval.
