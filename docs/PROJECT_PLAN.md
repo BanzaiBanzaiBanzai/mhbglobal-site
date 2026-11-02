@@ -140,3 +140,6 @@ Lead verified marker MHB-KONTAKT-20261102-A in Kontakt Junk Email at21:21:34UTC,
 
 ## Notification header diagnosis, 2 November 2026
 Actual Outlook message headers verify correct owner Reply-To and SPF/DKIM/DMARC/compauth passes for Formspree. Microsoft nevertheless classified SCL5, SFV:SPM, CAT:PHISH and delivered to Junk. Exact trigger not exposed; LAN URL contribution is unproven. No MHB-domain authentication failure shown by this inbound notification. Not-junk UI would add a persistent Safe Sender exception, so confirmation was cancelled. Archive retained; reliable Inbox retest and possible authorised provider false-positive review remain open. Private header evidence in work/formspree-notification-headers-2026-11-02.txt.
+
+## Diagnostic message recovered without safelisting, 2 November 2026
+Used Move to Inbox for the single test message and explicitly unchecked the future-sender exception before confirming. Verified diagnostic now in Inbox and Junk empty. No safelist or tenant protection changes. This manual recovery does not close the delivery gate. Next meaningful test: intended HTTPS origin during approved controlled release, with direct-contact/maintenance fallback available. No repeated local sends or spoofed production origin; archive retained. Screenshot: private work/formspree-test-recovered-2026-11-02.png.
