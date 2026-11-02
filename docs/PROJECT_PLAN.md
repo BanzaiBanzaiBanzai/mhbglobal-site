@@ -2,7 +2,7 @@
 
 Updated: 2026-11-02. Goal: bilingual mobile-first website with working enquiries, reviewed locally before publication.
 
-**Current state: public website OFFLINE; relaunch NOT READY.** Web Developer owns implementation. Account/provider verification, email checks, rendered QA and final owner approval remain open. Historical successful releases below are evidence only, not current readiness. Current task detail is in RELAUNCH-01–06 and ANALYTICS-01–02 below.
+**Current state: public website OFFLINE; relaunch NOT READY.** Web Developer owns implementation. Provider evidence/retention setup, lead mail readiness and final owner approval remain open. Local rendered QA is complete within the scope recorded below; actual HTTPS-origin delivery belongs controlled deployment acceptance. Historical successful releases below are evidence only, not current readiness. Current task detail is in RELAUNCH-01–06 and ANALYTICS-01–02 below.
 
 | Milestone | Status | Trigger | Exit gate |
 |---|---|---|---|
@@ -13,9 +13,9 @@ Updated: 2026-11-02. Goal: bilingual mobile-first website with working enquiries
 | ID | Priority/status | Task / owner | Depends on | Acceptance evidence |
 |---|---|---|---|---|
 | BUILD-01 | P1 DONE | Revise mobile design and service copy / Team Lead IT | None | Navy-blue company palette; retained layout; cafe with yellow chairs and kids corner in hero/cards; bright white salon with terracotta chairs; card images flush-aligned |
-| QA-01 | P1 IN PROGRESS | Verify current relaunch / Web Developer | BUILD-01 | Nine automated checks pass; prior 31 October browser checks retained below; 390px core browser QA passed; final QA remains |
+| QA-01 | P1 DONE | Verify local release candidate / Web Developer | BUILD-01 | 320/390/1280/1440px checks;9tests on isolated release;25-file public manifest and header baseline. Live edge/delivery acceptance separate |
 | REVIEW-01 | P1 DONE | Review revised design / Hasnain | BUILD-01 | User approved navy/gold preview on 2026-10-31 |
-| FORM-01 | P1 BLOCKED | Finalise business enquiry delivery / Web Developer | Provider/account access | Historical Hotmail test passed; Kontakt routing, processor/transfer terms and retention implementation remain open |
+| FORM-01 | P1 BLOCKED | Finalise business enquiry delivery / Web Developer | Provider/account access | Kontakt routing and Reply-To verified; processor/transfer terms and retention setup open. Production-origin Inbox acceptance follows approved deployment |
 | SEO-01 | P1 DONE | SEO and delivery foundations / Team Lead IT | BUILD-01 | Static SV/EN HTML, canonical/hreflang, sitemap, metadata, responsive WebP, public-only dist and security headers |
 | RELEASE-01 | P1 PLANNED | Relaunch approved version / Web Developer | RELAUNCH-03, RELAUNCH-04, RELAUNCH-05 and final approval | Public hosting deleted; no current release. Prior release evidence retained in historical entries |
 
@@ -91,9 +91,9 @@ Owner confirms existing Vällingby address, reports Microsoft restriction fixed,
 |---|---|---|---|---|
 | RELAUNCH-01 | P1 DONE | Collect final external source audit / Team Lead IT | None | Read completed Privacy Gap Review; material source fixes implemented locally; nine automated checks pass |
 | RELAUNCH-02 | P1 DONE | Prepare verified disclosures and minimal form / Team Lead IT | Owner address confirmation | SV/EN address, org/VAT, direct contact, basis/rights/retention text; optional name/service; no-JS submission disabled with email fallback |
-| RELAUNCH-03 | P1 BLOCKED | Finalise enquiry providers and retention / Web Developer + Hasnain | Formspree sign-in/account terms | Browser restored; Formspree signed out. Business recipient, Article 28/transfer evidence, storage/deletion settings and retention implementation remain open |
+| RELAUNCH-03 | P1 BLOCKED | Finalise enquiry providers and retention / Web Developer + Hasnain | Provider clarification and operating setup | Signed in;Kontakt verified/routed;Reply-To correct. Article28/transfer evidence and storage/log/backup handling remain open; manual retention package prepared |
 | RELAUNCH-04 | P1 BLOCKED | Verify mail authentication and delivery / Team Lead IT | Microsoft DKIM activation sync | Exact selector CNAMEs published DNS-only and resolve via 1.1.1.1; Microsoft still reports CNAME not found, signing disabled. DMARC and signed delivery verification remain open |
-| RELAUNCH-05 | P1 IN PROGRESS | Final local QA and owner look / Web Developer + Hasnain | RELAUNCH-03 | Nine tests pass; 390px core rendered/mobile checks pass; wider/narrower final QA and routed delivery remain; design/assets unchanged |
+| RELAUNCH-05 | P1 IN PROGRESS | Final local QA and owner look / Web Developer + Hasnain | RELAUNCH-03 | Local320/390/1280/1440px QA and isolated25-file release checks pass; owner final look remains. HTTPS-origin acceptance is RELAUNCH-06 |
 | RELAUNCH-06 | P1 PLANNED | Restore hosting and search discovery / Team Lead IT | Final approval and blockers cleared | No deployment; preserve indexing metadata/sitemap; verify bot access, security headers and absent optional beacon after launch |
 
 Analytics choice: start with existing aggregate server reports and Search Console/Bing verification, no client tracker. Detailed click tracking deferred. SEO foundations retained and company structured data enriched; indexing/recommendation not guaranteed. Public privacy wording remains a launch draft until actual provider arrangements are verified. Private workflow/source links: work/enquiry-operations.txt outside repository. This entry supersedes earlier completed-release/hold and pending-address statuses.
@@ -143,3 +143,7 @@ Actual Outlook message headers verify correct owner Reply-To and SPF/DKIM/DMARC/
 
 ## Diagnostic message recovered without safelisting, 2 November 2026
 Used Move to Inbox for the single test message and explicitly unchecked the future-sender exception before confirming. Verified diagnostic now in Inbox and Junk empty. No safelist or tenant protection changes. This manual recovery does not close the delivery gate. Next meaningful test: intended HTTPS origin during approved controlled release, with direct-contact/maintenance fallback available. No repeated local sends or spoofed production origin; archive retained. Screenshot: private work/formspree-test-recovered-2026-11-02.png.
+
+## Consolidated prelaunch package, 2 November 2026
+Local QA and isolated release verification completed;9tests pass,25public files manifested, normal preview stays noindex. Private package work/prelaunch-package-20261102.txt records exact scope and limits, provider recommendation, actionable manual retention steps, and five-stage acceptance. Keep Formspree; send one prepared standard-terms/retention clarification only after owner authorises external contact. Recipient/Reply-To verified; Junk result belongs intended HTTPS-origin controlled-deployment acceptance, not a circular predeployment requirement. Archive ON; no broad safelist. Retention folders/rule/register still need implementation; no automation or deletion installed. Curator already complete, invoices not launch gates. Design unchanged, no publication.
+
