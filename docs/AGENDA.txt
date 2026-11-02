@@ -1,3 +1,24 @@
+CURRENT EXECUTION PLAN — 2 November 2026
+This summary supersedes stale statuses in historical entries below.
+OUTCOME: approved Swedish/English company website live on mhbglobal.se, enquiries received and replyable, proportionate privacy/retention in operation, free traffic/search reporting, maintainable deployment and rollback. Preserve approved design. Owner asked to see this plan before execution through production; final launch confirmation remains required.
+
+1. COMPLETE PRELAUNCH PACKAGE — Web Developer
+Finish remaining desktop/narrow-mobile, keyboard, form failure/no-JS, language and final public-build checks. Close provider/notice mismatch using verified applicable terms; provide one concrete recommendation if provider clarification is necessary. Implement simple enquiry folders/manual monthly cleanup procedure (six months after last meaningful contact for closed unsuccessful leads; active/customer records separate); document provider-copy handling accurately. No destructive automated cleanup. Exit: tested package and truthful notices/operations, specific unresolved exceptions only.
+2. COMPLETE BUSINESS MAIL READINESS — Team Lead IT
+Recheck Microsoft DKIM activation after existing CNAME publication; configure appropriate DMARC and verify actual signed outbound mail/replies. Formspree Kontakt recipient and Reply-To verified. Local notification authenticated but classified as Junk; manually recovered without safelist. Keep archive until production-origin delivery verified. Exit: mail evidence plus explicit live-only test procedure.
+3. ONE RELEASE REVIEW — Team Lead IT, then owner
+Review developer evidence and remaining material gaps; deliver one local preview plus short readiness report. Owner final look/launch confirmation once. Avoid repeated design reviews, external audits or micro-approvals. No invoice/bookkeeping dependency.
+4. CONTROLLED PRODUCTION RELEASE — Web Developer executes, Team Lead verifies
+Recreate existing Cloudflare Pages hosting, deploy approved public-only build, connect mhbglobal.se/TLS, verify live bilingual pages, headers, privacy, form submission and actual Kontakt Inbox/Reply-To. Live-origin tests belong here, not as an impossible predeployment prerequisite. Keep direct-contact fallback and verified maintenance rollback ready; never claim success solely from form HTTP response.
+5. DISCOVERY AND OPERATIONS — Web Developer, managed by Team Lead
+After release checks: validate indexing/canonical/hreflang/sitemap/crawler access; configure Search Console and Bing with authorised accounts where available. Verify Cloudflare aggregate traffic/country coverage and record baseline/report method. No optional client trackers or ads. Search account login may need owner; indexer processing/rankings are not launch guarantees. Finish with production URL, deployed checkpoint, delivery evidence and concise remaining nonblocking tasks.
+
+OWNER INPUT ONLY WHEN NECESSARY
+Authentication/CAPTCHA; acceptance of new binding provider terms if required; explicit external provider message if needed (prepare exact text first); one final launch confirmation. Address, design, Kontakt routing, simple retention policy and initial analytics choice are already decided.
+COORDINATION
+Web Developer completes whole work packages, reports by milestone or concrete blocker. Team Lead reviews and resolves decisions, continues independent work during waits. Use bounded event waits for active workers, sensible intervals for an actually running external review; do not poll idle workers or repeat completed curator reviews. No recurring jobs created. Task evidence remains PROJECT_PLAN.md and private work records.
+
+--- HISTORICAL DETAIL AND SUPPORTING PROCEDURES ---
 MHB GLOBAL SWEDEN — RESUME AGENDA
 Updated 2 November 2026, Europe/Stockholm
 STATUS: LAUNCH PREPARATION RESUMED. Preserve design. Local/LAN review only; await final look and launch confirmation. No deletion jobs enabled.
@@ -95,6 +116,7 @@ BILLING AND SUPPORT CHECK — 2 November 2026
 - Verify renewal date, price and ONE paid user before trial conversion. Trial order lists 25 zero-cost seats; this does not establish paid renewal quantity.
 - Latest support email checked in Hotmail UK: 2026-11-01T22:12:55Z, case 2610311420000346. Pending internal review; no confirmed removal of restriction. No duplicate case or additional tests sent. Follow up in existing case if promised Monday update does not arrive.
 - No automatic monitoring, deletion or deployment enabled. Website remains on hold.
+
 
 
 
