@@ -1,12 +1,12 @@
 # MHB Global Sweden website
 
-Updated: 2026-10-31. Goal: bilingual mobile-first website with working enquiries, reviewed locally before publication.
+Updated: 2026-11-02. Goal: bilingual mobile-first website with working enquiries, reviewed locally before publication.
 
 | Milestone | Status | Trigger | Exit gate |
 |---|---|---|---|
 | M0 Design | DONE | User approved layout; requested navy-blue palette | Approved direction and replacement media screened |
 | M1 Working preview | DONE | Implementation and feedback | User visual approval of revised preview |
-| M2 Launch | DONE | User approves revised preview | Release build, deployment and live verification |
+| M2 Relaunch | IN PROGRESS | Owner resumes preparation; final look before launch | Verified providers/form/mail, final local QA and approved deployment |
 
 | ID | Priority/status | Task / owner | Depends on | Acceptance evidence |
 |---|---|---|---|---|
@@ -81,3 +81,17 @@ Verified both shared-mailbox Gmail NDRs: 550 5.7.708 AS(7910), originating 20:06
 Checked Hotmail UK: latest reply on case 2610311420000346 received 2026-11-01T22:12:55Z; internal review pending, engineer expects Monday-shift update. No further input requested and no resolution confirmed. Existing Hotmail tests passed, shared-mailbox Gmail outbound failures remain unresolved.
 
 Invoice G195177491 (2026-10-31, SEK 0.00, no payment needed) was verified previously in admin centre. Download/archive is BLOCKED because internal browser access is disabled in Work settings; email searches found no attached invoice. Located existing Drive receipts folder and OpenAI naming convention; no substitute document created. Archive original PDF after access resumes and verify next receipt number in register. Check one-user paid renewal settings before trial conversion. Current authoritative next steps reconciled in AGENDA.txt; website remains offline and local-only.
+
+## Launch preparation resumed, 2026-11-02
+Owner confirms existing Vällingby address, reports Microsoft restriction fixed, asks for no design changes and phone LAN preview. Verified address and VAT from private tax document. Local preview responds HTTP200 at http://192.168.1.30:5194/; private-network interface only, no firewall/router change. Phone reachability not independently verified.
+
+| ID | Priority/status | Task / owner | Depends on | Acceptance evidence |
+|---|---|---|---|---|
+| RELAUNCH-01 | P1 DONE | Collect final external source audit / Team Lead IT | None | Read completed Privacy Gap Review; material source fixes implemented locally; nine automated checks pass |
+| RELAUNCH-02 | P1 DONE | Prepare verified disclosures and minimal form / Team Lead IT | Owner address confirmation | SV/EN address, org/VAT, direct contact, basis/rights/retention text; optional name/service; no-JS submission disabled with email fallback |
+| RELAUNCH-03 | P1 BLOCKED | Finalise enquiry providers and retention / Team Lead IT + Hasnain | Browser access/account terms | Private monthly manual workflow drafted; Formspree recipient, processor terms, storage and mailbox folders not applied |
+| RELAUNCH-04 | P1 BLOCKED | Verify mail authentication and delivery / Team Lead IT | Browser access | Owner says restriction fixed; SPF present, public DMARC/standard DKIM records absent; obtain exact tenant values and retest |
+| RELAUNCH-05 | P1 IN PROGRESS | Final local QA and owner look / Team Lead IT + Hasnain | RELAUNCH-03 | Nine tests pass; rendered/mobile QA pending; design/assets unchanged |
+| RELAUNCH-06 | P1 PLANNED | Restore hosting and search discovery / Team Lead IT | Final approval and blockers cleared | No deployment; preserve indexing metadata/sitemap; verify bot access, security headers and absent optional beacon after launch |
+
+Analytics choice: start with existing aggregate server reports and Search Console/Bing verification, no client tracker. Detailed click tracking deferred. SEO foundations retained and company structured data enriched; indexing/recommendation not guaranteed. Public privacy wording remains a launch draft until actual provider arrangements are verified. Private workflow/source links: work/enquiry-operations.txt outside repository. This entry supersedes earlier completed-release/hold and pending-address statuses.

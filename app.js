@@ -14,7 +14,7 @@ function setLanguage(value){lang=value;document.documentElement.lang=lang;docume
 const urlLang=new URLSearchParams(location.search).get('lang');if(['en','sv'].includes(urlLang))lang=urlLang;
 document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();setLanguage(b.dataset.lang)}));
 menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';document.querySelector('#navigation').classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',lang==='sv'?(open?'Stäng meny':'Öppna meny'):(open?'Close menu':'Open menu'))});
-document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu?.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus()}});
 document.querySelectorAll('.close-dialog').forEach(b=>b.addEventListener('click',()=>{if(b.closest('dialog').id==='request-dialog'&&sending)return;b.closest('dialog').close()}));document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){if(d.id==='request-dialog'&&sending)return;const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}}));
 document.querySelectorAll('.example-card[data-example]').forEach(button=>{
  const key=button.dataset.example;
@@ -31,7 +31,7 @@ document.querySelectorAll('.example-card[data-example]').forEach(button=>{
  });
 });
 const form=document.querySelector('#quote-form');
-function validate(focus=true){if(!form)return true;let first=null;['name','email','service','message'].forEach(key=>{const field=form.elements[key];let error='';if(!field.value.trim())error=lang==='sv'?'Fyll i det här fältet.':'Please complete this field.';else if(!field.validity.valid)error=lang==='sv'?'Ange en giltig e-postadress.':'Please enter a valid email address.';document.querySelector('#error-'+key).textContent=error;field.setAttribute('aria-invalid',String(!!error));field.setAttribute('aria-describedby','error-'+key);if(error&&!first)first=field});if(first&&focus)first.focus();return !first}
+function validate(focus=true){if(!form)return true;let first=null;['email','message'].forEach(key=>{const field=form.elements[key];let error='';if(!field.value.trim())error=lang==='sv'?'Fyll i det här fältet.':'Please complete this field.';else if(!field.validity.valid)error=lang==='sv'?'Ange en giltig e-postadress.':'Please enter a valid email address.';document.querySelector('#error-'+key).textContent=error;field.setAttribute('aria-invalid',String(!!error));field.setAttribute('aria-describedby','error-'+key);if(error&&!first)first=field});if(first&&focus)first.focus();return !first}
 form?.addEventListener('submit',e=>{e.preventDefault();if(!validate())return;document.querySelector('#send-request').disabled=false;document.querySelector('#send-status').textContent='';const summary=document.querySelector('#request-summary');summary.replaceChildren();for(const key of ['name','email','company','service','message']){const val=form.elements[key].value.trim();if(!val)continue;const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=t(key==='service'?'need':key);dd.textContent=key==='service'?form.elements.service.selectedOptions[0].textContent:val;summary.append(dt,dd)}document.querySelector('#request-dialog').showModal()});
 form?.addEventListener('input',e=>{if(e.target.getAttribute('aria-invalid')==='true')validate(false)});setLanguage(lang);
 
@@ -64,3 +64,6 @@ document.querySelector('#send-request')?.addEventListener('click',async()=>{
  }catch(error){status.textContent=lang==='sv'?'Vi kunde inte bekräfta att förfrågan kom fram. Dina uppgifter finns kvar. Försök igen om en stund.':'We could not confirm receipt. Your details are still here. Please try again shortly.';button.disabled=false}
  finally{sending=false}
 });
+
+// Enable Review only after all form handlers have initialized successfully.
+if(form)form.querySelector('.form-submit').disabled=false;

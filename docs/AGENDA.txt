@@ -1,19 +1,22 @@
 MHB GLOBAL SWEDEN — RESUME AGENDA
 Updated 2 November 2026, Europe/Stockholm
-STATUS: ON HOLD at Hasnain's request. Do not relaunch or enable deletion jobs.
+STATUS: LAUNCH PREPARATION RESUMED. Preserve design. Local/LAN review only; await final look and launch confirmation. No deletion jobs enabled.
 
 WHEN ASKED "WHAT IS ON THE AGENDA?"
 Start here. Task evidence and Git history are in PROJECT_PLAN.md in this folder.
 The public website is OFFLINE (Pages project deleted by owner). The complete website remains a local preview.
 
-NEXT, WHEN HASNAIN RESUMES
-1. Confirm the final company/business address. Address may change soon; do not publish the old address as final.
-2. Await Microsoft outbound restriction case 2610311420000346. Latest reply 1 November 23:12 Stockholm: internal team review pending; engineer expects an update during Monday shift. No further information requested. The earlier provisioning wait was superseded by successful mailbox creation.
-3. Elin, Kontakt and Support are created. Hotmail two-way tests passed; Support/Kontakt to Gmail failed with 550 5.7.708 AS(7910). After Microsoft confirms resolution, retest Gmail both ways for all three and verify DKIM/DMARC, shared Sent Items copies and shared-account sign-in blocking. Do not buy extra licences automatically.
-4. Collect the source-package review from the existing external ChatGPT Pro chat, then resolve only material applicable findings. Do not assume all checks passed. As of hold: reviewer reports build and seven tests pass; flags no-JavaScript direct submission bypassing the review step, plus Linux preview-server portability. Final report pending.
+CURRENT NEXT STEPS — 2 November 2026
+1. Owner confirms current Vällingby address and says Microsoft sending restriction is fixed. Address/VAT independently checked in company tax document: Rättar Vigs väg 112D, 162 72 Vällingby; SE559538728201. Company details added to SV/EN privacy pages and structured data. No new Gmail delivery test yet.
+2. Local preview started at http://192.168.1.30:5194/ for owner's phone on home LAN. PC HTTP check passes; phone reachability awaits owner. Public site remains offline. No firewall changes/router forwarding.
+3. Finish Formspree: business Kontakt recipient, applicable free-account processor/transfer terms, storage/deletion settings. Internal browser disabled in Work settings; owner asked to enable it. Documented monthly manual retention workflow in private work/enquiry-operations.txt; no mailbox folder/rule/deletion applied.
+4. Configure/verify email authentication with exact Microsoft tenant values. Public DNS via1.1.1.1 has SPF but no DMARC or standard selector1/selector2 DKIM CNAMEs. Sending restriction and authentication are separate.
+5. Final external source audit collected from Privacy Gap Review. Applied no-JS submit protection + email fallback, optional name/service, bilingual controller/basis/retention/rights/technical-processing wording, correct static privacy-language links, decorative hotspot accessibility and Escape focus. Preview path is now portable. Nine automated checks pass. Rendered/mobile final QA pending browser access; original artwork/layout unchanged.
+6. Analytics: initial aggregate Cloudflare server reports plus Search Console/Bing DNS/static verification. No client tracking, GA4 or consent banner added. Account setup still pending. Release sitemap/metadata and crawler access prepared; no guarantee of indexing or AI recommendations.
+7. Confirm applicable provider contracts/settings and final public notice match actual implementation before approval. Website is NOT yet signed off or published. Avoid claiming all legal checks passed.
 
 MINIMUM BEFORE REOPENING ENQUIRIES
-- Publish verified legal company name, organisation number, registered seat, business address, monitored email and VAT number where applicable. Identity already checked: MHB Global AB, 559538-7282, Stockholm. Address/email are pending.
+- Publish verified legal company name, organisation number, registered seat, business address, monitored email and VAT number where applicable. Identity already checked: MHB Global AB, 559538-7282, Stockholm. Address is confirmed; Kontakt is the chosen direct contact. Verify live form routing.
 - Minimise fields: consider required email/message, optional name/company. GDPR still applies to identifiable email, messages and technical logs even without a database owned by us.
 - Finish matching Swedish/English privacy information: controller/contact, data/purpose, appropriate lawful bases (individual precontract steps vs B2B representative legitimate interests), recipients, retention, actual transfers/safeguards, rights and IMY complaint route. Explain delivery/security technical data separately.
 - Verify actual Formspree free-account data-processing agreement/roles, transfer safeguards, deletion/backups and security. Public claims alone are not account-contract evidence. Verify Cloudflare and Microsoft arrangements too.
@@ -23,7 +26,7 @@ MINIMUM BEFORE REOPENING ENQUIRIES
 - Fix verified material code/notice mismatches, test normal/failure/no-JavaScript submission paths without sending real customer data, check mobile/keyboard basics and SV/EN consistency.
 - Determine applicability of accessibility/AI transparency rules from actual business/site facts; do not assume every optional improvement is a legal launch requirement.
 
-CURRENT PUBLIC PROTECTION
+HISTORICAL MAINTENANCE PROTECTION (hosting subsequently deleted)
 - Maintenance response: HTTP 503 + Retry-After, no public enquiry form, noindex/nofollow headers and HTML.
 - robots.txt: User-agent: * / Disallow: / requested for all compliant search and AI crawlers. It is not access control and cannot guarantee removal of previously indexed URLs or stop bots that ignore it.
 - Cloudflare optional client RUM disabled and verified. Do not add optional trackers or a cookie banner merely because a contact form exists.
