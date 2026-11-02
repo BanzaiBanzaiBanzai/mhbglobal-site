@@ -92,7 +92,7 @@ Owner confirms existing Vällingby address, reports Microsoft restriction fixed,
 | RELAUNCH-01 | P1 DONE | Collect final external source audit / Team Lead IT | None | Read completed Privacy Gap Review; material source fixes implemented locally; nine automated checks pass |
 | RELAUNCH-02 | P1 DONE | Prepare verified disclosures and minimal form / Team Lead IT | Owner address confirmation | SV/EN address, org/VAT, direct contact, basis/rights/retention text; optional name/service; no-JS submission disabled with email fallback |
 | RELAUNCH-03 | P1 BLOCKED | Finalise enquiry providers and retention / Web Developer + Hasnain | Formspree sign-in/account terms | Browser restored; Formspree signed out. Business recipient, Article 28/transfer evidence, storage/deletion settings and retention implementation remain open |
-| RELAUNCH-04 | P1 BLOCKED | Verify mail authentication and delivery / Team Lead IT | Browser access | Owner says restriction fixed; SPF present, public DMARC/standard DKIM records absent; obtain exact tenant values and retest |
+| RELAUNCH-04 | P1 BLOCKED | Verify mail authentication and delivery / Team Lead IT | Microsoft DKIM activation sync | Exact selector CNAMEs published DNS-only and resolve via 1.1.1.1; Microsoft still reports CNAME not found, signing disabled. DMARC and signed delivery verification remain open |
 | RELAUNCH-05 | P1 IN PROGRESS | Final local QA and owner look / Web Developer + Hasnain | RELAUNCH-03 | Nine tests pass; 390px core rendered/mobile checks pass; wider/narrower final QA and routed delivery remain; design/assets unchanged |
 | RELAUNCH-06 | P1 PLANNED | Restore hosting and search discovery / Team Lead IT | Final approval and blockers cleared | No deployment; preserve indexing metadata/sitemap; verify bot access, security headers and absent optional beacon after launch |
 
@@ -123,4 +123,8 @@ Restored a single LAN preview listener at 192.168.1.30:5194 after no listener wa
 
 ## Current external-review and account gates, 2 November 2026
 The completed Privacy Gap Review (chat 6ae62644-3760-8332-863f-e29c8f279393) has been collected; RELAUNCH-01 is complete. Its material source findings were addressed at checkpoint 9398e98 and subsequent QA is recorded above. No duplicate external audit started. This source review does not close provider/account gates: Formspree business routing, applicable processing/transfer terms, storage/log/backup retention, mailbox retention setup, actual hosting analytics coverage and final deployment checks remain open. Formspree sign-in handoff is retained without login polling. Team Lead IT owns Microsoft authentication separately and reports tenant status NoDKIMKeys for mhbglobal.se; worker will not make simultaneous mailbox/DNS changes. Public hosting remains offline and final owner approval is required.
+
+
+## Mail authentication progress reported by Team Lead IT, 2 November 2026
+Microsoft DKIM keys generated; both exact selector CNAMEs saved DNS-only in Cloudflare and resolved via 1.1.1.1. Microsoft activation still reports CNAME not found, so signing is not enabled. DMARC and actual signed-delivery checks remain pending. Private evidence: work/enquiry-operations.txt and work/dkim-dns-2026-11-02.png. This supersedes the earlier NoDKIMKeys status; no website-worker DNS mutations or publication. Lead also reports invoice G195177491 (SEK 0) confirmed but download stalled and archive not completed.
 
