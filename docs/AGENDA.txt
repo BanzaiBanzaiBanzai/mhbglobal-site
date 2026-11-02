@@ -1,15 +1,15 @@
 MHB GLOBAL SWEDEN — RESUME AGENDA
-Updated 31 October 2026, Europe/Stockholm
+Updated 2 November 2026, Europe/Stockholm
 STATUS: ON HOLD at Hasnain's request. Do not relaunch or enable deletion jobs.
 
 WHEN ASKED "WHAT IS ON THE AGENDA?"
 Start here. Task evidence and Git history are in PROJECT_PLAN.md in this folder.
-The live domain stays on maintenance. The complete website remains a local preview.
+The public website is OFFLINE (Pages project deleted by owner). The complete website remains a local preview.
 
 NEXT, WHEN HASNAIN RESUMES
 1. Confirm the final company/business address. Address may change soon; do not publish the old address as final.
-2. Recheck Microsoft domain/email setup no earlier than 3 November 2026, 18:48 Stockholm time (72 hours after this hold decision). Microsoft reportedly advised waiting 24 hours; owner chose 72. This is an agenda date, not an automatic job.
-3. Set up/verify elin@mhbglobal.se and support@mhbglobal.se using the intended one-user arrangement. Verify sending, receiving, aliases/shared mailbox choice, public contact address and sign-in workflow. Do not buy extra licences automatically.
+2. Await Microsoft outbound restriction case 2610311420000346. Latest reply 1 November 23:12 Stockholm: internal team review pending; engineer expects an update during Monday shift. No further information requested. The earlier provisioning wait was superseded by successful mailbox creation.
+3. Elin, Kontakt and Support are created. Hotmail two-way tests passed; Support/Kontakt to Gmail failed with 550 5.7.708 AS(7910). After Microsoft confirms resolution, retest Gmail both ways for all three and verify DKIM/DMARC, shared Sent Items copies and shared-account sign-in blocking. Do not buy extra licences automatically.
 4. Collect the source-package review from the existing external ChatGPT Pro chat, then resolve only material applicable findings. Do not assume all checks passed. As of hold: reviewer reports build and seven tests pass; flags no-JavaScript direct submission bypassing the review step, plus Linux preview-server portability. Final report pending.
 
 MINIMUM BEFORE REOPENING ENQUIRIES
@@ -72,3 +72,10 @@ Chrome sidebar setup verified, 31 October 2026: owner requested PC/Chrome contro
 
 OUTBOUND RESTRICTION ESCALATED — 31 October 2026
 Microsoft service request 2610311420000346 opened, Sev C, awaiting agent assignment. Title: Exchange Online outbound blocked: 550 5.7.708 AS(7910) — new trial tenant. Owner authorised submission. Verified Support and Kontakt Gmail NDRs directly; original message UTC times 20:06:10 and 20:06:15. Attached private extracted diagnostics outbound-failure-reports.txt. Requested investigation/removal and trial IP exception if applicable; response by email to owner Hotmail UK. Restriction NOT yet resolved. Earlier successful Hotmail tests remain valid only for those messages; Gmail outbound fails. Next: read Microsoft reply, follow verified remediation, retest Gmail/Outlook, then verify DKIM/DMARC. Do not recreate mailboxes, change domains, buy licences or relaunch website as workaround. Evidence work/microsoft-outbound-ticket.png outside public repo.
+
+BILLING AND SUPPORT CHECK — 2 November 2026
+- Microsoft invoice G195177491, 31 October 2026, SEK 0.00, No payment needed was verified in the previous admin-centre check. PDF archive remains BLOCKED: internal browser tool reports local browser use disabled in Work settings; no invoice attachment found in Hotmail UK or business mailbox search. Nothing saved as an invoice yet.
+- Destination verified: Google Drive/WorK/MHB Global AB/01 Organizational/00 Tax and Book Keeping/00 Receipts/2026/Q4 Oct-Dec. Existing naming example: 20261010 R001 OpenAI ChatGPT Pro 3176point82 SEK.pdf. Next receipt number must be checked against the register before assigning; do not treat the zero-value trial invoice as a paid receipt.
+- Verify renewal date, price and ONE paid user before trial conversion. Trial order lists 25 zero-cost seats; this does not establish paid renewal quantity.
+- Latest support email checked in Hotmail UK: 2026-11-01T22:12:55Z, case 2610311420000346. Pending internal review; no confirmed removal of restriction. No duplicate case or additional tests sent. Follow up in existing case if promised Monday update does not arrive.
+- No automatic monitoring, deletion or deployment enabled. Website remains on hold.

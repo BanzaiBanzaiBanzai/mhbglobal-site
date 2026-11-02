@@ -76,3 +76,8 @@ Added Support and Kontakt to owner Outlook sidebar through current Chrome sessio
 
 ## Microsoft outbound restriction escalation, 2026-10-31
 Verified both shared-mailbox Gmail NDRs: 550 5.7.708 AS(7910), originating 20:06:10/20:06:15 UTC. Submitted email support case 2610311420000346 with extracted report attachment; Open, Sev C, agent assignment pending. Requested trial IP exception if applicable and investigation/removal of restriction. Owner Hotmail UK is contact. Private diagnostics and screenshot in work/outbound-failure-reports.txt and work/microsoft-outbound-ticket.png. No resolution claimed; no new test sends or domain changes. Next Microsoft response, retest and authentication review. Prior Hotmail success does not establish Gmail delivery.
+
+## Billing archive and support status, 2026-11-02
+Checked Hotmail UK: latest reply on case 2610311420000346 received 2026-11-01T22:12:55Z; internal review pending, engineer expects Monday-shift update. No further input requested and no resolution confirmed. Existing Hotmail tests passed, shared-mailbox Gmail outbound failures remain unresolved.
+
+Invoice G195177491 (2026-10-31, SEK 0.00, no payment needed) was verified previously in admin centre. Download/archive is BLOCKED because internal browser access is disabled in Work settings; email searches found no attached invoice. Located existing Drive receipts folder and OpenAI naming convention; no substitute document created. Archive original PDF after access resumes and verify next receipt number in register. Check one-user paid renewal settings before trial conversion. Current authoritative next steps reconciled in AGENDA.txt; website remains offline and local-only.
