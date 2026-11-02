@@ -2,25 +2,27 @@
 
 Updated: 2026-11-02. Goal: bilingual mobile-first website with working enquiries, reviewed locally before publication.
 
+**Current state: public website OFFLINE; relaunch NOT READY.** Web Developer owns implementation. Account/provider verification, email checks, rendered QA and final owner approval remain open. Historical successful releases below are evidence only, not current readiness. Current task detail is in RELAUNCH-01–06 and ANALYTICS-01–02 below.
+
 | Milestone | Status | Trigger | Exit gate |
 |---|---|---|---|
 | M0 Design | DONE | User approved layout; requested navy-blue palette | Approved direction and replacement media screened |
-| M1 Working preview | DONE | Implementation and feedback | User visual approval of revised preview |
+| M1 Working preview | IN PROGRESS | Local privacy/form fixes complete | Current rendered/mobile QA and final owner look |
 | M2 Relaunch | IN PROGRESS | Owner resumes preparation; final look before launch | Verified providers/form/mail, final local QA and approved deployment |
 
 | ID | Priority/status | Task / owner | Depends on | Acceptance evidence |
 |---|---|---|---|---|
 | BUILD-01 | P1 DONE | Revise mobile design and service copy / Team Lead IT | None | Navy-blue company palette; retained layout; cafe with yellow chairs and kids corner in hero/cards; bright white salon with terracotta chairs; card images flush-aligned |
-| QA-01 | P1 DONE | Verify revised site / Team Lead IT | BUILD-01 | 7 node tests; actual SV/EN selection replacement and preservation, mobile menu, privacy navigation, successful submission and inbox confirmation; no horizontal overflow at 320px |
+| QA-01 | P1 IN PROGRESS | Verify current relaunch / Web Developer | BUILD-01 | Nine automated checks pass; prior 31 October browser checks retained below; current rendered/mobile QA pending |
 | REVIEW-01 | P1 DONE | Review revised design / Hasnain | BUILD-01 | User approved navy/gold preview on 2026-10-31 |
-| FORM-01 | P1 DONE | Connect enquiry delivery / Team Lead IT | None | Formspree myeenkwa; storage and Formshield enabled; test in dashboard; owner confirmed inbox receipt |
+| FORM-01 | P1 BLOCKED | Finalise business enquiry delivery / Web Developer | Provider/account access | Historical Hotmail test passed; Kontakt routing, processor/transfer terms and retention implementation remain open |
 | SEO-01 | P1 DONE | SEO and delivery foundations / Team Lead IT | BUILD-01 | Static SV/EN HTML, canonical/hreflang, sitemap, metadata, responsive WebP, public-only dist and security headers |
-| RELEASE-01 | P1 DONE | Publish approved version / Team Lead IT | REVIEW-01 | Live at https://mhbglobal.se; release dist deployed; bilingual routes, images and live enquiry verified |
+| RELEASE-01 | P1 PLANNED | Relaunch approved version / Web Developer | RELAUNCH-03, RELAUNCH-04, RELAUNCH-05 and final approval | Public hosting deleted; no current release. Prior release evidence retained in historical entries |
 
-| CONCEPT-01 | P1 DONE | Local website and app concepts / Team Lead IT | None | Three distinct scrolling website compositions, Swedish app interfaces; menu, appointment and quote interactions checked; 320/390px overflow checks passed |
-| REVIEW-02 | P1 READY | Review approved-image click-through previews / Hasnain | CONCEPT-01 | http://127.0.0.1:5194/#examples; approved static mockups with local hotspots; no publication |
+| CONCEPT-01 | P1 DONE | Approved concept artwork / Team Lead IT | None | Historical interactive prototypes superseded by approved static artwork with visual click feedback; no booking/order flows |
+| REVIEW-02 | P1 PLANNED | Final owner look / Hasnain | RELAUNCH-05 | http://192.168.1.30:5194/#examples; preserve approved design, no repeated full redesign review |
 
-## Evidence and checkpoint
+## Historical evidence and checkpoints (31 October 2026)
 Baseline checkpoint: 85b29ef. Updated local Git checkpoint follows this revision. No remote push or deployment.
 Seven automated tests pass. Public image payload: 513,070 bytes for three 1200px files; 185,922 bytes for three 640px files. Source image archive verified: 9 assets, 27 files on 2026-10-31. External ChatGPT visual screening found no concrete high-risk issue in the replacement images; no reverse-image search performed.
 Enquiry test sent 2026-10-31, visible in Formspree and owner-confirmed in inbox. Current free plan: 50/month and 30-day dashboard archive.
@@ -108,3 +110,6 @@ Web Developer accepted website ownership and reviewed agenda, implementation che
 | ANALYTICS-02 | P1 BLOCKED | Verify account reporting and search ownership / Web Developer | Internal browser and hosting restoration | No account access/configuration claimed; confirm actual metrics and DNS/static ownership verification |
 
 Open launch gates unchanged: Formspree business routing/processor and retention evidence; mailbox retention implementation; exact tenant DKIM/DMARC and delivery verification; rendered/mobile QA; final owner look and approval.
+
+## Release procedure and provider clarification prepared, 2026-11-02
+Private Formspree clarification draft saved at work/formspree-clarification-draft.txt; not sent. It asks for Free-plan processing roles/Article28 terms, transfer mechanism and annexes, subprocessors and submission/log/backup retention, including storage-disabled behaviour. AGENDA.txt now distinguishes predeployment gates, live-only checks and rollback. Top-level QA/form/release statuses corrected; earlier successful-release evidence retained as history. No code/design/account changes or redundant tests.

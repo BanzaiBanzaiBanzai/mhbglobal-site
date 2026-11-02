@@ -31,16 +31,29 @@ HISTORICAL MAINTENANCE PROTECTION (hosting subsequently deleted)
 - robots.txt: User-agent: * / Disallow: / requested for all compliant search and AI crawlers. It is not access control and cannot guarantee removal of previously indexed URLs or stop bots that ignore it.
 - Cloudflare optional client RUM disabled and verified. Do not add optional trackers or a cookie banner merely because a contact form exists.
 
-CONTROLLED RELAUNCH, ONLY WHEN AUTHORISED
-- Final local review, verified disclosures/provider arrangements and enquiry test.
-- Restore full site from local branch while preserving production maintenance history; no force-push.
-- Remove maintenance robots disallow and noindex from production; restore normal sitemap/robots and 200 responses. Check deployed output and provider-injected scripts.
-- Recheck crawlability and ask search engines to index only after full site is ready.
+CONTROLLED RELAUNCH — PREDEPLOYMENT GATES
+- Preserve approved design. Finish Formspree processor/transfer/retention evidence and verified Kontakt routing, operational retention procedure and mail verification. Private clarification draft: work/formspree-clarification-draft.txt (NOT SENT).
+- Verify final privacy notices match actual services/settings. Complete rendered/mobile/keyboard and no-JS form checks once browser access returns. Use test enquiries only; record delivery evidence without visitor data.
+- Prepare release from a clean isolated build directory using node tools/build.mjs --release. Inspect allowlisted public output; no work/docs/private originals. Validate HTML/meta/robots/sitemap, asset references and expected security-header file. Preserve local preview noindex build. Run appropriate checks once against final changed version, not repeatedly without cause.
+- Record source commit, package hashes and intended hosting settings. Preserve existing Git/main history; no force-push. Save current zone/hosting settings without exporting secrets. Prepare a static no-form maintenance fallback before exposure (503/noindex/Retry-After) and its deployment steps; do not rely on deleted Pages history as rollback.
+- Owner gets final look and gives launch approval. Do not treat past release approval as approval for this relaunch.
 
-LATER, OPTIONAL
-- Free Google Search Console and Bing Webmaster Tools using DNS/static verification.
-- Existing Cloudflare server statistics, interpreted cautiously (requests/bots are not customers).
-- Review genuinely needed analytics later. Ads, pixels, paid tools, outreach campaigns, new functionality and automated deletion jobs are outside this hold.
+APPROVED DEPLOYMENT AND LIVE-ONLY CHECKS
+- Recreate hosting/custom domain and deploy approved package only; do not change domain registration or email DNS as part of website restore. Verify TLS and intended canonical hostname. Record deployment ID/time/commit.
+- Check actual public /, /en/, /privacy.html and /en/privacy.html responses/content, internal anchors and assets, unknown-path behaviour, response security headers and CSP. Source _headers presence alone is not deployed-header evidence.
+- Check rendered network/storage behaviour and served HTML for provider-injected scripts/cookies. Optional client RUM stays off. Verify form review/send/failure states and a labelled enquiry arriving in Kontakt with correct reply route; remove test copies through normal supported cleanup when appropriate.
+- Verify robots/sitemap/canonicals/hreflang and no residual noindex or bot challenge on intended public pages. Configure Search Console/Bing DNS/static ownership and sitemap after normal200 release; do not submit maintenance URLs for indexing.
+- Verify actual Cloudflare Pages/custom-domain traffic appears in chosen analytics and which hostname/path/country metrics are available. Zone documentation alone does not prove this project's coverage. Record an initial reporting baseline and exclude diagnostics where identifiable.
+
+ROLLBACK / STOP RULE
+- If the form leaks/misroutes data, mandatory notice is wrong, critical paths fail or unapproved tracking appears, stop promotion/indexing requests and replace the failing release with the prepared no-form maintenance fallback. Do not roll back to the old public site with known disclosure/form gaps.
+- Use a verified safe deployment rollback only if one exists in the recreated project; otherwise deploy the prepared fallback. Verify503/noindex and absent enquiry form, preserve diagnostic evidence privately, and report to owner/Team Lead IT.
+- Do not delete Pages project, alter mail DNS, purge records or perform irreversible actions as an improvised rollback. Additional irreversible steps require the normal explicit approval. Resume release only after the specific issue is fixed and approval scope remains valid.
+
+ANALYTICS SETUP PENDING; LATER EXTENSIONS OPTIONAL
+- Initial selected setup: free Google Search Console/Bing DNS/static verification plus available Cloudflare server statistics. Requests/IP-country estimates are not named people or customer counts. Web Developer reports to Team Lead IT on request.
+- Actual account and Pages/custom-domain coverage still require verification.
+- Review genuinely needed analytics later. Ads, pixels, paid tools, outreach campaigns, new functionality and automated deletion jobs are outside the current launch scope.
 - Reassess privacy/legal impact when adding forms, accounts, payments, analytics or advertising. Keep scope proportionate.
 
 RECORDS
@@ -48,7 +61,7 @@ External review chat: https://chatgpt.com/c/6ae62644-3760-8332-863f-e29c8f279393
 Public-source review package and private reviewer copies are in the parent workspace work folder, outside the public website repository.
 Media originals, credit/provenance records and archives stay in the private Google Drive Media Library. Do not publish those records.
 No legal clearance or guarantee against complaints has been issued. Track concrete completed checks and unresolved facts.
-Crawler block verified live: robots.txt returns HTTP 200 with only User-agent: * and Disallow: /. Cloudflare Bot Preference Sync disabled because its injected Allow: / conflicted with the maintenance block. Main page remains 503 and X-Robots-Tag noindex,nofollow. Reassess Bot Preference Sync at relaunch; do not blindly restore its prior AI-training restrictions if owner wants AI crawling then.
+Historical crawler-block verification before project deletion: robots.txt returns HTTP 200 with only User-agent: * and Disallow: /. Cloudflare Bot Preference Sync disabled because its injected Allow: / conflicted with the maintenance block. Main page remains 503 and X-Robots-Tag noindex,nofollow. Reassess Bot Preference Sync at relaunch; do not blindly restore its prior AI-training restrictions if owner wants AI crawling then.
 
 OFFLINE REQUEST, 31 October 2026
 Owner requested both mhbglobal.se and mhbglobal-site.pages.dev offline until final release. GitHub integration disconnected and verified (Connect button now shown), so pushes no longer deploy automatically. Hosting deletion prepared, not executed: Cloudflare warns permanent removal of deployed assets/history/configuration and release of pages.dev project name. Action-time confirmation pending. Both addresses may still serve maintenance until deletion completes.
