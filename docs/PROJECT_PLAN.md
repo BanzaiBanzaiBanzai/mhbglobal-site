@@ -134,3 +134,6 @@ Owner completed sign-in. Free50/month account supports two linked emails. Added 
 
 ## Business enquiry routing saved, 2 November 2026
 Kontakt verified after owner completion and saved as sole workflow recipient; Formspree success confirmed. Local website accepted diagnostic MHB-KONTAKT-20261102-A with owner Hotmail reply-to. Mailbox receipt/Reply-To verification delegated to lead; do not infer delivery from form success alone. Archive remains enabled; provider/retention gates and publication hold remain open. Evidence outside repo: work/formspree-kontakt-routing-2026-11-02.png.
+
+## Kontakt test classified as junk, 2 November 2026
+Lead verified marker MHB-KONTAKT-20261102-A in Kontakt Junk Email at21:21:34UTC, not Inbox. Reply-To unverified because connector omitted it. Routing changed successfully but delivery gate remains open for junk diagnosis/retest. Archive stays ON; no tenant spam protections weakened. Fixed unselected optional service payload to omit the field instead of sending Choose an option. Preview build and9tests pass; no design change or extra test submission.

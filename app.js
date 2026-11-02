@@ -55,7 +55,7 @@ document.querySelector('#send-request')?.addEventListener('click',async()=>{
  if(sending)return;
  const button=document.querySelector('#send-request'),status=document.querySelector('#send-status');
  sending=true;button.disabled=true;status.textContent=lang==='sv'?'Skickar…':'Sending…';
- const payload=new FormData(form);payload.set('language',lang);payload.set('service',form.elements.service.selectedOptions[0].textContent);payload.set('_subject','MHB Global Sweden — website enquiry');
+ const payload=new FormData(form);payload.set('language',lang);if(form.elements.service.value)payload.set('service',form.elements.service.selectedOptions[0].textContent);else payload.delete('service');payload.set('_subject','MHB Global Sweden — website enquiry');
  try{
   await submitEnquiry(form.action,payload);
   status.textContent=lang==='sv'?'Tack! Din förfrågan är mottagen. Vi återkommer via e-post.':'Thank you! Your request has been received. We will reply by email.';
@@ -67,3 +67,4 @@ document.querySelector('#send-request')?.addEventListener('click',async()=>{
 
 // Enable Review only after all form handlers have initialized successfully.
 if(form)form.querySelector('.form-submit').disabled=false;
+
