@@ -35,7 +35,7 @@ CONTROLLED RELAUNCH — PREDEPLOYMENT GATES
 - Preserve approved design. Finish Formspree processor/transfer/retention evidence and verified Kontakt routing, operational retention procedure and mail verification. Private clarification draft: work/formspree-clarification-draft.txt (NOT SENT).
 - Verify final privacy notices match actual services/settings. Complete rendered/mobile/keyboard and no-JS form checks once browser access returns. Use test enquiries only; record delivery evidence without visitor data.
 - Prepare release from a clean isolated build directory using node tools/build.mjs --release. Inspect allowlisted public output; no work/docs/private originals. Validate HTML/meta/robots/sitemap, asset references and expected security-header file. Preserve local preview noindex build. Run appropriate checks once against final changed version, not repeatedly without cause.
-- Record source commit, package hashes and intended hosting settings. Preserve existing Git/main history; no force-push. Save current zone/hosting settings without exporting secrets. Prepare a static no-form maintenance fallback before exposure (503/noindex/Retry-After) and its deployment steps; do not rely on deleted Pages history as rollback.
+- Record source commit, package hashes and intended hosting settings. Preserve existing Git/main history; no force-push. Save current zone/hosting settings without exporting secrets. Existing fallback verified locally: work/maintenance/dist, built from release/maintenance checkpoint91912b6. Exactly _worker.js, index.html and robots.txt; handler returns503/noindex/Retry-After3600 except robots200/disallow-all. Private hash/evidence file: work/maintenance-fallback-verification.txt. No duplicate artifact needed; do not rely on deleted Pages history as rollback.
 - Owner gets final look and gives launch approval. Do not treat past release approval as approval for this relaunch.
 
 APPROVED DEPLOYMENT AND LIVE-ONLY CHECKS
@@ -47,7 +47,7 @@ APPROVED DEPLOYMENT AND LIVE-ONLY CHECKS
 
 ROLLBACK / STOP RULE
 - If the form leaks/misroutes data, mandatory notice is wrong, critical paths fail or unapproved tracking appears, stop promotion/indexing requests and replace the failing release with the prepared no-form maintenance fallback. Do not roll back to the old public site with known disclosure/form gaps.
-- Use a verified safe deployment rollback only if one exists in the recreated project; otherwise deploy the prepared fallback. Verify503/noindex and absent enquiry form, preserve diagnostic evidence privately, and report to owner/Team Lead IT.
+- Use a verified safe deployment rollback only if one exists in the recreated project; otherwise use a Pages advanced-mode deployment of the entire work/maintenance/dist directory to the recreated production project. Verify the saved hashes first, include _worker.js, and never upload the worktree root or deploy these files as static-only hosting (that would lose503 behaviour). Current runtime edge behaviour must still be checked after deployment. Verify503/noindex and absent enquiry form, preserve diagnostic evidence privately, and report to owner/Team Lead IT.
 - Do not delete Pages project, alter mail DNS, purge records or perform irreversible actions as an improvised rollback. Additional irreversible steps require the normal explicit approval. Resume release only after the specific issue is fixed and approval scope remains valid.
 
 ANALYTICS SETUP PENDING; LATER EXTENSIONS OPTIONAL
