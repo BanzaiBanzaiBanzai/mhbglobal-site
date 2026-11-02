@@ -131,3 +131,6 @@ Microsoft DKIM keys generated; both exact selector CNAMEs saved DNS-only in Clou
 
 ## Formspree account inspected, 2 November 2026
 Owner completed sign-in. Free50/month account supports two linked emails. Added authorised Kontakt recipient; confirmation sent and status PENDING. Lead handling mailbox verification. Existing workflow still sends to Hotmail; no switch or storage change until verification and delivery test. Archive and Formshield enabled, CAPTCHA and account MFA disabled. Public terms/security still leave processing-role/DPA and retention evidence unresolved; existing provider clarification draft remains unsent. Private details/evidence in work/enquiry-operations.txt and work/formspree-recipient-pending-2026-11-02.png. No upgrade, publication, or external support message.
+
+## Business enquiry routing saved, 2 November 2026
+Kontakt verified after owner completion and saved as sole workflow recipient; Formspree success confirmed. Local website accepted diagnostic MHB-KONTAKT-20261102-A with owner Hotmail reply-to. Mailbox receipt/Reply-To verification delegated to lead; do not infer delivery from form success alone. Archive remains enabled; provider/retention gates and publication hold remain open. Evidence outside repo: work/formspree-kontakt-routing-2026-11-02.png.
