@@ -137,3 +137,6 @@ Kontakt verified after owner completion and saved as sole workflow recipient; Fo
 
 ## Kontakt test classified as junk, 2 November 2026
 Lead verified marker MHB-KONTAKT-20261102-A in Kontakt Junk Email at21:21:34UTC, not Inbox. Reply-To unverified because connector omitted it. Routing changed successfully but delivery gate remains open for junk diagnosis/retest. Archive stays ON; no tenant spam protections weakened. Fixed unselected optional service payload to omit the field instead of sending Choose an option. Preview build and9tests pass; no design change or extra test submission.
+
+## Notification header diagnosis, 2 November 2026
+Actual Outlook message headers verify correct owner Reply-To and SPF/DKIM/DMARC/compauth passes for Formspree. Microsoft nevertheless classified SCL5, SFV:SPM, CAT:PHISH and delivered to Junk. Exact trigger not exposed; LAN URL contribution is unproven. No MHB-domain authentication failure shown by this inbound notification. Not-junk UI would add a persistent Safe Sender exception, so confirmation was cancelled. Archive retained; reliable Inbox retest and possible authorised provider false-positive review remain open. Private header evidence in work/formspree-notification-headers-2026-11-02.txt.
