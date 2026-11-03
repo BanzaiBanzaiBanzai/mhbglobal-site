@@ -10,7 +10,7 @@ let lang=document.documentElement.lang==='en'?'en':'sv';
 const t=key=>(lang==='en'?en[key]:sv[key])||key;
 const menu=document.querySelector('#menu');
 function closeMenu(){document.querySelector('#navigation')?.classList.remove('open');menu?.setAttribute('aria-expanded','false');if(menu)menu.setAttribute('aria-label',lang==='sv'?'Öppna meny':'Open menu')}
-function setLanguage(value){lang=value;document.documentElement.lang=lang;document.querySelectorAll('[data-t]').forEach(el=>{el.textContent=t(el.dataset.t)});document.querySelectorAll('[data-alt]').forEach(el=>el.alt=t(el.dataset.alt));document.querySelectorAll('[data-lang]').forEach(el=>el.removeAttribute('aria-pressed'));document.querySelectorAll('[data-t=privacy]').forEach(el=>{if(el.tagName==='A')el.href=lang==='en'?'/en/privacy.html':'/privacy.html'});document.querySelectorAll('[data-t=back],.privacy-main ~ footer a,.privacy-page .brand').forEach(el=>el.href=lang==='en'?'/en/#contact':'/#contact');document.title=document.querySelector('.privacy-main')?(lang==='sv'?'Integritetsinformation — MHB Global Sweden':'Privacy information — MHB Global Sweden'):(lang==='sv'?'Webbplatser, appar & uppgraderingar — MHB Global Sweden':'Websites, apps & upgrades — MHB Global Sweden');document.querySelector('#navigation')?.setAttribute('aria-label',lang==='sv'?'Huvudmeny':'Main navigation');closeMenu();syncDesign();updateSEO();if(document.querySelector('[aria-invalid="true"]'))validate(false);}
+function setLanguage(value){lang=value;document.documentElement.lang=lang;document.querySelectorAll('[data-t]').forEach(el=>{el.textContent=t(el.dataset.t)});document.querySelectorAll('[data-alt]').forEach(el=>el.alt=t(el.dataset.alt));document.querySelectorAll('[data-lang]').forEach(el=>el.removeAttribute('aria-pressed'));document.querySelectorAll('[data-t=privacy]').forEach(el=>{if(el.tagName==='A')el.href=lang==='en'?'/en/privacy':'/privacy'});document.querySelectorAll('[data-t=back],.privacy-main ~ footer a,.privacy-page .brand').forEach(el=>el.href=lang==='en'?'/en/#contact':'/#contact');document.title=document.querySelector('.privacy-main')?(lang==='sv'?'Integritetsinformation — MHB Global Sweden':'Privacy information — MHB Global Sweden'):(lang==='sv'?'Webbplatser, appar & uppgraderingar — MHB Global Sweden':'Websites, apps & upgrades — MHB Global Sweden');document.querySelector('#navigation')?.setAttribute('aria-label',lang==='sv'?'Huvudmeny':'Main navigation');closeMenu();syncDesign();updateSEO();if(document.querySelector('[aria-invalid="true"]'))validate(false);}
 const urlLang=new URLSearchParams(location.search).get('lang');if(['en','sv'].includes(urlLang))lang=urlLang;
 document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();setLanguage(b.dataset.lang)}));
 menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';document.querySelector('#navigation').classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',lang==='sv'?(open?'Stäng meny':'Öppna meny'):(open?'Close menu':'Open menu'))});
@@ -37,7 +37,7 @@ form?.addEventListener('input',e=>{if(e.target.getAttribute('aria-invalid')==='t
 
 function updateSEO(){
  const privacy=!!document.querySelector('.privacy-main');
- const path=(lang==='en'?'/en/':'/')+(privacy?'privacy.html':'');
+ const path=(lang==='en'?'/en/':'/')+(privacy?'privacy':'');
  if(location.pathname!==path)history.replaceState(null,'',path+location.hash);
  const desc=privacy?(lang==='sv'?'Integritetsinformation för MHB Global Sweden.':'Privacy information for MHB Global Sweden.'):(lang==='sv'?'Webbplatser, appar och uppgraderingar för ditt företag. MHB Global Sweden hjälper dig från idé och design till lansering. Begär en offert.':'Websites, apps and upgrades for your business. MHB Global Sweden helps you from idea and design to launch. Request a quote.');
  document.querySelector('meta[name="description"]')?.setAttribute('content',desc);
@@ -46,7 +46,7 @@ function updateSEO(){
  document.querySelector('meta[property="og:title"]')?.setAttribute('content',document.title);
  document.querySelector('meta[property="og:description"]')?.setAttribute('content',desc);
  document.querySelector('meta[property="og:locale"]')?.setAttribute('content',lang==='sv'?'sv_SE':'en_GB');
- document.querySelectorAll('[data-lang]').forEach(a=>{a.href=(a.dataset.lang==='en'?'/en/':'/')+(privacy?'privacy.html':'')+location.hash;a.setAttribute('aria-current',a.dataset.lang===lang?'page':'false')});
+ document.querySelectorAll('[data-lang]').forEach(a=>{a.href=(a.dataset.lang==='en'?'/en/':'/')+(privacy?'privacy':'')+location.hash;a.setAttribute('aria-current',a.dataset.lang===lang?'page':'false')});
 }
 
 let sending=false;

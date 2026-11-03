@@ -154,3 +154,14 @@ Created Kontakt/Website enquiries with Active, Closed unsuccessful and Customers
 
 ## Production authorisation and interim email mode, 3 November 2026
 Owner explicitly authorised remaining launch tasks including deployment, relayed by Team Lead IT. No further generic launch approval required. Lead approved interim direct-Kontakt email draft flow while Formspree clarification is pending and informed owner. Approved design preserved; final action labelled Open email draft/Öppna e-postutkast, no false sent confirmation. User input encoded into fixed-destination draft, long content falls back to copying; fields remain until visitor leaves. No Formspree endpoint/HTTP submission/hidden fields in public package. Earlier integration retained in Git and source submission module, excluded from dist. SV/EN privacy reflects current Microsoft email/Cloudflare flow; no optional trackers introduced. Eleven tests pass, including encoding/length and no-server-submission checks. Build clears dist before public allowlist copy to avoid stale modules. Lead confirms Kontakt/Support Gmail Inbox tests and aligned authentication; Elin separate restriction remains, not claimed fixed. DMARC monitoring published by lead. Provider clarification sent by lead, awaiting reply.
+
+
+## 3 November 2026 — production activation
+- Owner authorisation relayed by Team Lead: deploy approved website with interim direct-Kontakt email draft flow; preserve design.
+- Cloudflare Pages recreated from existing GitHub integration/main, build `node tools/build.mjs --release`, output `dist`; initial production source 04921fe.
+- mhbglobal.se custom domain Active with SSL enabled. Apex HTTPS returned 200 at 00:19:56 UTC using public DNS IP, while local/browser negative DNS cache still lagged.
+- Live SV/EN pages, media and email module verified. No optional beacon, Formspree endpoint or Set-Cookie in checked responses. Pages Web Analytics disabled.
+- Fixed privacy canonical/hreflang/sitemap/internal links to Cloudflare clean URLs /privacy and /en/privacy; .html URLs redirect308. Preview supports these routes. Eleven tests pass.
+- Cloudflare zone Analytics provides host filter, countries and paths. ALWAYS filter host=mhbglobal.se: unfiltered zone includes Packing List. Initial four apex requests were initialization errors, not customer traffic; no visitor conclusions.
+- Search Console awaiting owner Google login. Bing sign-in reaches new profile/persistent-access consent, not accepted. Search setup pending, independent of publication.
+- Lead verified Kontakt sending and receiving, aligned authentication. Formspree clarification sent, response pending; actual online submission stays inactive.
