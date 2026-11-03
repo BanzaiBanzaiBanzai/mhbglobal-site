@@ -14,3 +14,18 @@ test('both privacy pages include verified controller details and direct rights c
 test('submission succeeds only after provider confirms acceptance',async()=>{const payload=new FormData();payload.set('name','Test');let options;await submitEnquiry('https://formspree.io/f/test',payload,async(_,o)=>{options=o;return {ok:true,json:async()=>({ok:true})}});assert.equal(options.method,'POST');assert.equal(options.body,payload);assert.equal(options.headers.Accept,'application/json');});
 test('network failures, rejection and malformed acceptance remain failures',async()=>{for(const fake of [async()=>{throw Error('offline')},async()=>({ok:false}),async()=>({ok:true,json:async()=>({})}),async()=>({ok:true,json:async()=>{throw Error('invalid json')}})]){await assert.rejects(submitEnquiry('endpoint',new FormData(),fake))}});
 test('crawlable locale pages include matching metadata and no private records',async()=>{for(const locale of ['','en/']){const html=await readFile(new URL('../dist/'+locale+'index.html',import.meta.url),'utf8');assert.match(html,new RegExp('<html lang="'+(locale?'en':'sv')+'">'));assert.ok(html.includes('href="https://mhbglobal.se/'+locale+'"'));assert.match(html,/hreflang="sv"/);assert.match(html,/hreflang="en"/);assert.ok(html.includes(locale?'A stronger digital presence.':'En starkare digital närvaro.'));assert.equal((html.match(/<h1>/g)||[]).length,1)}const names=await readdir(new URL('../dist/',import.meta.url),{recursive:true});assert.ok(!names.some(n=>/records|archives|PROJECT_PLAN|\.png$/.test(n)));});
+
+// Email-only release must not transmit data or turn input into mail headers.
+import {buildEmailDraft} from '../email-draft.mjs';
+test('email draft encodes user content and keeps a fixed destination',()=>{
+ const url=buildEmailDraft({email:'person@example.com',message:'Hej & tack?\r\nBcc: nobody@example.com # å'});
+ const parsed=new URL(url);assert.equal(parsed.pathname,'kontakt@mhbglobal.se');
+ assert.deepEqual([...parsed.searchParams.keys()],['subject','body']);
+ assert.ok(parsed.searchParams.get('body').includes('Hej & tack?\r\nBcc:'));
+ assert.equal(buildEmailDraft({message:'å'.repeat(3000)}),null);
+});
+test('public email-only build has no server submission endpoint or hidden inputs',async()=>{
+ for(const locale of ['','en/']){const html=await readFile(new URL('../dist/'+locale+'index.html',import.meta.url),'utf8');assert.ok(html.includes('mailto:kontakt@mhbglobal.se'));assert.ok(!html.includes('formspree.io'));assert.ok(!/type="hidden"/.test(html));}
+ const app=await readFile(new URL('../dist/app.js',import.meta.url),'utf8');assert.ok(!app.includes('submitEnquiry'));assert.ok(!app.includes('fetch('));
+ const names=await readdir(new URL('../dist/',import.meta.url));assert.ok(!names.includes('submission.mjs'));
+});

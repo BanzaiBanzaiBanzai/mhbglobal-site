@@ -1,4 +1,4 @@
-import {readFile,writeFile,mkdir,copyFile} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,copyFile,rm} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import en from '../en.mjs';
 const root=resolve(import.meta.dirname,'..');
@@ -16,8 +16,10 @@ for(const name of pages){let html=await read(name);html=meta(html,'sv',name==='p
 await write('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+['/','/en/','/privacy.html','/en/privacy.html'].map(p=>`<url><loc>https://mhbglobal.se${p}</loc></url>`).join('')+'</urlset>');
 await write('robots.txt','User-agent: *\nAllow: /\nSitemap: https://mhbglobal.se/sitemap.xml\n');
 // A deployment package contains public files only, never project plans or media records.
+await rm(resolve(root,'dist'),{recursive:true,force:true});
 await mkdir(resolve(root,'dist/assets'),{recursive:true});await mkdir(resolve(root,'dist/en'),{recursive:true});
-const files=['index.html','privacy.html','en/index.html','en/privacy.html','styles.css','app.js','en.mjs','sv.mjs','selection.mjs','submission.mjs','sample-designs.mjs','concepts.css','_headers','robots.txt','sitemap.xml','assets/favicon.svg',...['cafe','house','salon'].flatMap(k=>[`assets/${k}.webp`,`assets/${k}-640.webp`,`assets/${k}-mockup.webp`])];
+const files=['index.html','privacy.html','en/index.html','en/privacy.html','styles.css','app.js','en.mjs','sv.mjs','selection.mjs','email-draft.mjs','sample-designs.mjs','concepts.css','_headers','robots.txt','sitemap.xml','assets/favicon.svg',...['cafe','house','salon'].flatMap(k=>[`assets/${k}.webp`,`assets/${k}-640.webp`,`assets/${k}-mockup.webp`])];
 for(const f of files)await copyFile(resolve(root,f),resolve(root,'dist',f));
 if(process.argv.includes('--release')){for(const file of ['index.html','privacy.html','en/index.html','en/privacy.html']){const path=resolve(root,'dist',file);await writeFile(path,(await readFile(path,'utf8')).replace('<meta name="robots" content="noindex,nofollow">','<meta name="robots" content="index,follow">'))}}
 console.log('Built Swedish/English pages and public-only dist/. Mode: '+(process.argv.includes('--release')?'release':'preview (noindex)'));
+

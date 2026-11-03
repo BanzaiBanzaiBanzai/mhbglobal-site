@@ -1,3 +1,6 @@
+CURRENT AUTHORISATION — 3 November 2026
+Owner authorised deployment and remaining tasks. Interim direct-Kontakt email draft mode approved by lead and explained to owner while Formspree clarification is pending. No further generic launch confirmation needed. Keep approved design; current runtime has no optional tracking. Actual production checks still required.
+
 CURRENT EXECUTION PLAN — 2 November 2026
 This summary supersedes stale statuses in historical entries below.
 OUTCOME: approved Swedish/English company website live on mhbglobal.se, enquiries received and replyable, proportionate privacy/retention in operation, free traffic/search reporting, maintainable deployment and rollback. Preserve approved design. Owner asked to see this plan before execution through production; final launch confirmation remains required.
@@ -116,6 +119,7 @@ BILLING AND SUPPORT CHECK — 2 November 2026
 - Verify renewal date, price and ONE paid user before trial conversion. Trial order lists 25 zero-cost seats; this does not establish paid renewal quantity.
 - Latest support email checked in Hotmail UK: 2026-11-01T22:12:55Z, case 2610311420000346. Pending internal review; no confirmed removal of restriction. No duplicate case or additional tests sent. Follow up in existing case if promised Monday update does not arrive.
 - No automatic monitoring, deletion or deployment enabled. Website remains on hold.
+
 
 
 

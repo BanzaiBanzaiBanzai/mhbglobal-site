@@ -3,7 +3,7 @@ import en from './en.mjs';
 import {conceptMarkup,mountConcept} from './sample-designs.mjs';
 import sv from './sv.mjs';
 import {replaceDesignLine} from './selection.mjs';
-import {submitEnquiry} from './submission.mjs';
+import {buildEmailDraft} from './email-draft.mjs';
 let selectedDesign=null, managedLine='';
 function syncDesign(){if(!selectedDesign||!form)return;const next=(lang==='sv'?'Jag är intresserad av designexemplet: ':'I am interested in the design example: ')+t(selectedDesign)+'.';form.elements.message.value=replaceDesignLine(form.elements.message.value,managedLine,next);managedLine=next;}
 let lang=document.documentElement.lang==='en'?'en':'sv';
@@ -51,18 +51,13 @@ function updateSEO(){
 
 let sending=false;
 document.querySelector('#request-dialog')?.addEventListener('cancel',e=>{if(sending)e.preventDefault()});
-document.querySelector('#send-request')?.addEventListener('click',async()=>{
- if(sending)return;
- const button=document.querySelector('#send-request'),status=document.querySelector('#send-status');
- sending=true;button.disabled=true;status.textContent=lang==='sv'?'Skickar…':'Sending…';
- const payload=new FormData(form);payload.set('language',lang);if(form.elements.service.value)payload.set('service',form.elements.service.selectedOptions[0].textContent);else payload.delete('service');payload.set('_subject','MHB Global Sweden — website enquiry');
- try{
-  await submitEnquiry(form.action,payload);
-  status.textContent=lang==='sv'?'Tack! Din förfrågan är mottagen. Vi återkommer via e-post.':'Thank you! Your request has been received. We will reply by email.';
-  document.querySelector('#form-status').textContent=status.textContent;
-  form.reset();selectedDesign=null;managedLine='';
- }catch(error){status.textContent=lang==='sv'?'Vi kunde inte bekräfta att förfrågan kom fram. Dina uppgifter finns kvar. Försök igen om en stund.':'We could not confirm receipt. Your details are still here. Please try again shortly.';button.disabled=false}
- finally{sending=false}
+document.querySelector('#send-request')?.addEventListener('click',()=>{
+ const status=document.querySelector('#send-status');
+ const values=Object.fromEntries(new FormData(form));
+ if(values.service)values.service=form.elements.service.selectedOptions[0].textContent;
+ const draft=buildEmailDraft(values);
+ status.textContent=lang==='sv'?(draft?'Ditt e-postprogram öppnas. Skicka meddelandet där. Inget har skickats från webbplatsen.':'Texten är för lång för en e-postlänk. Kopiera uppgifterna ovan och mejla kontakt@mhbglobal.se.'):(draft?'Your email app will open. Send the message there. Nothing has been sent by this website.':'The text is too long for an email link. Copy the details above and email kontakt@mhbglobal.se.');
+ if(draft)location.href=draft;
 });
 
 // Enable Review only after all form handlers have initialized successfully.
